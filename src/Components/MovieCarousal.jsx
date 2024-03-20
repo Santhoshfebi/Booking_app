@@ -8,6 +8,11 @@ import 'swiper/css/navigation';
 
 import AazamBannerCard from '../SingleCards/AazamBannerCard';
 import AnyoneButYouBannerCard from '../SingleCards/AnyoneButYouBannerCard';
+import OppenHaimerBannerCard from '../SingleCards/OppenHaimerBannerCard';
+import DuneBannerCard from '../SingleCards/DuneBannerCard';
+import GetOutBannerCard from '../SingleCards/GetOutBannerCard';
+import MuzzleBannerCard from '../SingleCards/MuzzleBannerCard';
+import DinosaursBannerCard from '../SingleCards/DinosaursBannerCard';
 
 
 const MovieCarousal = () => {
@@ -32,8 +37,11 @@ const MovieCarousal = () => {
       >
       <SwiperSlide><AazamBannerCard /></SwiperSlide>
       <SwiperSlide><AnyoneButYouBannerCard /></SwiperSlide>
-      {/* <SwiperSlide><img src={img3} className='rounded-2xl' alt="" /></SwiperSlide>
-      <SwiperSlide><img src={img4} className='rounded-2xl' alt="" /></SwiperSlide> */}
+      <SwiperSlide><OppenHaimerBannerCard /></SwiperSlide>
+      <SwiperSlide><DuneBannerCard /> </SwiperSlide>
+      <SwiperSlide><GetOutBannerCard /> </SwiperSlide>
+      <SwiperSlide><MuzzleBannerCard /> </SwiperSlide>
+      <SwiperSlide><DinosaursBannerCard /> </SwiperSlide>
     
     </Swiper>
   </>
