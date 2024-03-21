@@ -419,7 +419,7 @@ const Offers = () => {
       <div className="bg-gray-100 flex items-center justify-center">
         <div className="w-[90%] "> 
         <div className="py-4"><h2 className="text-lg text-gray-500 text-start"><b>Privacy Note</b> </h2></div>
-        <div className="pb-6"><div class="text-justify text-sm text-gray-400">By using www.bookmyshow.com(our website), you are fully accepting the Privacy Policy available at <a href="/privacy" className="text-red-600">https://bookmyshow.com/privacy</a> governing your access to Bookmyshow and provision of services by Bookmyshow to you. If you do not accept terms mentioned in the <a href="/privacy" className="text-red-600">Privacy Policy</a>, you must not share any of your personal information and immediately exit Bookmyshow.</div></div>
+        <div className="pb-6"><div class="text-justify text-sm text-gray-400">By using www.bookmyshow.com(our website), you are fully accepting the Privacy Policy available at <a href="/privacy"    className="text-red-600">https://bookmyshow.com/privacy</a> governing your access to Bookmyshow and provision of services by Bookmyshow to you. If you do not accept terms mentioned in the <a href="/privacy" className="text-red-600">Privacy Policy</a>, you must not share any of your personal information and immediately exit Bookmyshow.</div></div>
       </div></div>
     </div>
   );
