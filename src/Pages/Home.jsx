@@ -1,8 +1,14 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
 import Header from '../Components/Header'
-import MovieCarousal from '../Components/MovieCarousal'
-import Offers from './Offers'
+
+// import MovieCarousal from '../Components/MovieCarousal'
+// import Offers from './Offers'
+
+// import CardCarousal from '../Components/CardCarousal'
+
+// import MovieCarousal from '../Components/MovieCarousal'
+
 // import Carousal from '../Components/Carousal'
 
 const Home = () => {
@@ -12,8 +18,12 @@ const Home = () => {
     {/* <Navbar />
     <Header />
     <MovieCarousal />  */}
+
+//     <CardCarousal />
+    {/* <MovieCarousal />  */}
+
     {/* <Carousal /> */}
-    <Offers />
+//     <Offers />
     </>
   )
 }
