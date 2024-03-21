@@ -75,7 +75,8 @@ const Offers = () => {
         </div>
       </div>
 
-      <div id="cards" className=" p-16 flex gap-4 bg-gray-100">
+      <div id="cards" className=" p-16 flex justify-center gap-4 bg-gray-100">
+        <div className="flex px-2 py-2 gap-2">
         <div id="card" className="relative rounded-lg shadow-2xl z-20">
           <div
             id="photo"
@@ -84,7 +85,7 @@ const Offers = () => {
             <img
               src="https://in.bmscdn.com/offers/offerlisting/sbi-inr-500-off-on-signature-credit-card-sbi0613.jpg?07122023114930"
               alt=""
-              className="h-full w-full object-cover"
+              className=" object-cover"
             />
             <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col  items-center pt-4 text-white opacity-0 transition-opacity duration-300 hover:opacity-100">
               <div className="text-sm font-bold ">ABOUT OFFER</div>
@@ -261,7 +262,6 @@ const Offers = () => {
             </div>
           </div>
         </div>
-
         <div id="card" className="relative rounded-lg shadow-2xl">
           <div
             id="photo"
@@ -299,6 +299,7 @@ const Offers = () => {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </div>

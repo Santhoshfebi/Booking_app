@@ -3,7 +3,7 @@ import Navbar from '../Components/Navbar'
 import Header from '../Components/Header'
 
 // import MovieCarousal from '../Components/MovieCarousal'
-// import Offers from './Offers'
+import Offers from './Offers'
 
 // import CardCarousal from '../Components/CardCarousal'
 
@@ -15,11 +15,10 @@ const Home = () => {
   return (
     <>
 
-    {/* <Navbar />
-    <Header />
-    <MovieCarousal />  */}
+    <Navbar />
+    <Header /> 
 
-//     <CardCarousal />
+{/* //     <CardCarousal /> */}
     {/* <MovieCarousal />  */}
 
     {/* <Carousal /> */}
