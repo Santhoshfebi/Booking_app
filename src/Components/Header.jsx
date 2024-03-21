@@ -3,7 +3,7 @@ import React from 'react'
 const Header = () => {
   return (
     // main header
-    <div className='bg-[#F5F5F5] text-center flex justify-between px-40 w-screen py-2'> 
+    <div className='bg-[#F5F5F5] text-center flex justify-between px-40  py-2'> 
 
       {/* left header */}
       <div>
