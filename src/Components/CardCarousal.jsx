@@ -76,4 +76,4 @@ const CardCarousal = () => {
   )
 }
 
-export default CardCarousal
+export default CardCarousal;
