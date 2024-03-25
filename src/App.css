@@ -36,5 +36,32 @@
     transform: rotate(360deg);
   }
 }
+/* Gift card css */
+.container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+}
 
+.box {
+  width: 23%; /* Adjust the width as needed */
+  margin-bottom: 20px; /* Adjust spacing between rows */
+  border: 1px solid #ccc; /* Optional: Add borders around boxes */
+  box-sizing: border-box;
+}
+
+.box img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+h1
+{
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: x-large;
+  font-weight: bolder;
+  font-style: italic;
+}
 

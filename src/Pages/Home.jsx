@@ -10,6 +10,7 @@ import CardCarousal from '../Components/CardCarousal'
 import Carousal from '../Components/Carousal'
 
 import Credit from './Credit'
+import GiftCard from './GiftCard'
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
 
     <Carousal />
      <Offers />
+     <GiftCard/>
      <Credit />
     </>
   )
