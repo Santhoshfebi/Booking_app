@@ -1,9 +1,9 @@
 import React from 'react'
-// import Navbar from '../Components/Navbar'
-// import Header from '../Components/Header'
+ import Navbar from '../Components/Navbar'
+ import Header from '../Components/Header'
 // 
 // import MovieCarousal from '../Components/MovieCarousal'
-// import Offers from './Offers'
+import Offers from './Offers'
 
 // import CardCarousal from '../Components/CardCarousal'
 
@@ -17,9 +17,15 @@ const Home = () => {
   return (
     <>
 
-    {/* <Navbar />
-    <Header />
-    <MovieCarousal />   */}
+
+    <Navbar />
+    <Header /> 
+
+{/* //     <CardCarousal /> */}
+    {/* <MovieCarousal />  */}
+
+
+
     {/* <Carousal /> */}
      {/* <Offers /> */}
      <Credit />

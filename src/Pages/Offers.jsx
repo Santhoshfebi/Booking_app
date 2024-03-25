@@ -79,12 +79,15 @@ const Offers = () => {
         </div>
       </div>
 
+
       <div id="cards" className=" p-8 flex justify-center gap-4 bg-gray-100 ">
         <div className="flex  gap-3 px-2 py-2">
+
           <div
             id="card"
             className="relative rounded-lg shadow-2xl z-10 cursor-pointer group"
           >
+
             <div
               id="photo"
               className="relative rounded-t-lg overflow-hidden h-[270px] "
@@ -114,6 +117,7 @@ const Offers = () => {
                       <span className="absolute  text-white text-xs px-2 py-1 rounded opacity-0 transition-opacity duration-300 top-full left-1/2 transform -translate-x-1/2 peer-hover:opacity-100">
                         Web
                       </span>
+
                     </div>
 
                     <div className="relative ">
@@ -321,6 +325,7 @@ const Offers = () => {
             </div>
           </div>
         </div>
+
       </div>
       <div className=" bg-gray-100">
       <div className="flex justify-center items-center">
@@ -410,9 +415,7 @@ const Offers = () => {
             </div>
           </div>
         </div>
-      
-      </div>
-      <div className="text-xs text-gray-400 pt-10 pb-6"><strong>BookMyShow offers</strong> are designed to delight you! Check them out now, there's bound to be one that suits you. Do remember to read Terms and Conditions before applying offer code, though!</div>
+
       </div>
       <div className="text-xs py-3 text-gray-400 text-start ml-16">Online Tickets &rarr; Offers</div>
 
@@ -421,6 +424,7 @@ const Offers = () => {
         <div className="py-4"><h2 className="text-lg text-gray-500 text-start"><b>Privacy Note</b> </h2></div>
         <div className="pb-6"><div class="text-justify text-sm text-gray-400">By using www.bookmyshow.com(our website), you are fully accepting the Privacy Policy available at <a href="/privacy"    className="text-red-600">https://bookmyshow.com/privacy</a> governing your access to Bookmyshow and provision of services by Bookmyshow to you. If you do not accept terms mentioned in the <a href="/privacy" className="text-red-600">Privacy Policy</a>, you must not share any of your personal information and immediately exit Bookmyshow.</div></div>
       </div></div>
+    </div>
     </div>
   );
 };
