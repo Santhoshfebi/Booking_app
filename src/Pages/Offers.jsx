@@ -88,7 +88,7 @@ const Offers = () => {
             id="card"
             className="relative rounded-lg shadow-2xl z-10 cursor-pointer group"
           >
-            <Link to={'../credit'}>
+            <Link to={'../offers/credit'}>
             <div
               id="photo"
               className="relative rounded-t-lg overflow-hidden h-[270px] "
