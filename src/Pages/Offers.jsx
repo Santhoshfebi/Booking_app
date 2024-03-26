@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Offers = () => {
   return (
@@ -82,12 +83,12 @@ const Offers = () => {
 
       <div id="cards" className=" p-8 flex justify-center gap-4 bg-gray-100 ">
         <div className="flex  gap-3 px-2 py-2">
-
+          
           <div
             id="card"
             className="relative rounded-lg shadow-2xl z-10 cursor-pointer group"
           >
-
+            <Link to={'../credit'}>
             <div
               id="photo"
               className="relative rounded-t-lg overflow-hidden h-[270px] "
@@ -157,7 +158,7 @@ const Offers = () => {
                   <div className="text-xs">31 Mar 2026 23:59</div>
                 </div>
               </div>
-            </div>
+            </div></Link>
           </div>
           <div
             id="card"
