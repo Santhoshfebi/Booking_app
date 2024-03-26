@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from '../Components/Navbar';
 import Header from '../Components/Header';
@@ -7,6 +8,8 @@ import Carousal from '../Components/Carousal';
 // import Credit from './Credit';
 // import Offers from './Offers';
 
+import Credit from './Credit'
+import GiftCard from './GiftCard'
 const Home = () => {
   return (
     <>
@@ -17,6 +20,8 @@ const Home = () => {
       <Carousal />
       {/* <Offers /> */}
       {/* <Credit /> */}
+     <GiftCard/>
+     <Credit />
     </>
   );
 };
