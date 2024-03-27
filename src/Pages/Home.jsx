@@ -1,14 +1,15 @@
 
 
 import React from 'react';
-// import Navbar from '../Components/Navbar';
-// import Header from '../Components/Header';
+import Navbar from '../Components/Navbar';
+import Header from '../Components/Header';
+// import Corporates from './Corporates';
 // import MovieCarousal from '../Components/MovieCarousal';
 // import CardCarousal from '../Components/CardCarousal';
 // import Carousal from '../Components/Carousal';
 // import Credit from './Credit';
 // import Offers from './Offers';
-import LogIn from './LogIn';
+// import LogIn from './LogIn';
 
 // import Credit from './Credit'
 // import GiftCard from './GiftCard'
@@ -16,17 +17,18 @@ import LogIn from './LogIn';
 const Home = () => {
   return (
     <>
-      {/* <Navbar />
+      <Navbar />
       <Header />
-      <Corporates />
-      <CardCarousal />
-      <MovieCarousal />
-      <Carousal /> */}
+      {/* <Corporates /> */}
+      {/* <Corporates /> */}
+      {/* <CardCarousal /> */}
+      {/* <MovieCarousal /> */}
+      {/* <Carousal /> */}
       {/* <Offers /> */}
       {/* <Credit /> */}
      {/* <GiftCard/>
      <Credit /> */}
-     <LogIn />
+     {/* <LogIn /> */}
 
     </>
   );
