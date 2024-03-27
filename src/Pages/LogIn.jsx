@@ -1,6 +1,6 @@
 import React from "react";
 import logi from "../Resources/login.webp";
-import bms from "../Resources/bookmyshow-logo.png";
+import bms from "../Resources/bms-logo.png";
 export default function Login () {
   return (
     <div className="flex items-center justify-center  bg-[#F84464] py-10">
@@ -9,7 +9,7 @@ export default function Login () {
           <img src={logi} alt="" className="h-full w-full object-cover" />
         </div>
         {/* <div className="h- w-[80%]  absolute py-14 "> */}
-          <div className="h-96 w-[27%]  bg-gray-800 flex flex-col gap-10 bg-opacity-50 absolute mt-14 ml-56">
+          <div className="h-96 w-[27%] bg-black flex flex-col gap-10 bg-opacity-70 absolute mt-14 ml-56 rounded-lg">
             <div className="h-14 w-36">
               <img src={bms} alt="" className="w-full h-full" />
             </div>
