@@ -44,4 +44,4 @@ const Carousal = () => {
   )
 }
 
-export default Carousal
+export default Carousal;
