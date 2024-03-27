@@ -1,5 +1,7 @@
-import React from "react";
-// import { Link } from "react-router-dom";
+
+import React from 'react'
+import { Link } from "react-router-dom";
+
 
 const Header = () => {
   return (
@@ -18,6 +20,7 @@ const Header = () => {
       </div>
 
       {/* right header */}
+      
       <div className="ml-20">
         <ul className="flex items-center justify-center gap-4 text-xs">
           <li>
@@ -33,11 +36,12 @@ const Header = () => {
           </li>
 
           <li>Corporates</li>
-          <li>Offers</li>
+          <li ><Link to={'./offers'}>Offers</Link> </li>
           <li>Gift Cards</li>
         </ul>
       </div>
     </div>
+    
   );
 };
 
