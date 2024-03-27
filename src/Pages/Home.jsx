@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 // import Navbar from '../Components/Navbar';
 // import Header from '../Components/Header';
@@ -11,11 +12,13 @@ import React from 'react';
 import SignIn from './SignIn';
 // import Credit from './Credit'
 // import GiftCard from './GiftCard'
+
 const Home = () => {
   return (
     <>
       {/* <Navbar />
       <Header />
+      <Corporates />
       <CardCarousal />
       <MovieCarousal />
       <Carousal /> */}
@@ -25,6 +28,8 @@ const Home = () => {
      <Credit /> */}
      {/* <LogIn /> */}
      <SignIn />
+     <LogIn />
+
     </>
   );
 };
