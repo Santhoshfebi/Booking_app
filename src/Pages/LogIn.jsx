@@ -83,6 +83,7 @@ export default function Login() {
             <div className="text-xs">By signing up, you agree to our <a href="" className="text-red-500 underline">Terms of use</a> and <a href="" className="text-red-500 underline">Privacy Policy</a>.</div>
             <button type='submit' className="w-[90%] rounded-md bg-[#F84464] text-white text-sm h-8">Sign Up</button>
             <div className="font-semibold text-sm pb-4">Already a member? <a href="" className="text-red-500 italic underline">Login</a></div>
+
           </div>
         </form>
       </div>
