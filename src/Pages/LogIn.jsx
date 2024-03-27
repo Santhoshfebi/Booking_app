@@ -18,26 +18,31 @@ export default function Login () {
                 type="text"
                 placeholder="Name"
                 className="bg-gray-100 w-[80%] text-sm h-7 rounded-md p-4 focus:outline-none"
+                required
               />
               <input
                 type="text"
                 placeholder="Email Address"
                 className="bg-gray-100 w-[80%] text-sm h-7 rounded-md p-4 focus:outline-none"
+                required
               />
               <input
-                type="text"
+                type="password"
                 placeholder="Set Password"
                 className="bg-gray-100 w-[80%] text-sm h-7 rounded-md p-4 focus:outline-none"
+                required
               />
               <input
-                type="text"
+                type="password"
                 placeholder="Confirm Password"
                 className="bg-gray-100 w-[80%] text-sm h-7 rounded-md p-4 focus:outline-none"
+                required
               />
                <input
                 type="text"
                 placeholder="Mobile Number"
                 className="bg-gray-100 w-[80%] text-sm h-7 rounded-md p-4 focus:outline-none"
+                required
               />
 
                 <div className="text-xs text-white">By signing up,you agree to our <a href="" className="text-red-500 underline">Terms of use</a> and <a href="" className="text-red-500 underline">Privacy Policy</a>.</div>

@@ -9,7 +9,7 @@ import React from 'react';
 // import Credit from './Credit';
 // import Offers from './Offers';
 import LogIn from './LogIn';
-
+import SignIn from './SignIn';
 // import Credit from './Credit'
 // import GiftCard from './GiftCard'
 
@@ -26,6 +26,8 @@ const Home = () => {
       {/* <Credit /> */}
      {/* <GiftCard/>
      <Credit /> */}
+     {/* <LogIn /> */}
+     <SignIn />
      <LogIn />
 
     </>
