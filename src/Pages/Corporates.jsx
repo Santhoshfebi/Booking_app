@@ -49,7 +49,9 @@ const Corporates = () => {
             <div className="rightbanner w-1/2 h-52 bg-slate-200"></div>
           </div>
         </div>
-        <div className="partners w-3/5 h-56 p-3 m-auto bg-white border border-black">
+
+        <div className="partners w-3/5 h-56 p-3 m-auto bg-white">
+
           <div className="head mb-8 mt-4 text-lg font-serif">OUR PARTNERS</div>
           <div className="partnames flex justify-around m-auto h-auto w-auto ">
             <div className="hp">

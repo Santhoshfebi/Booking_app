@@ -10,13 +10,11 @@ import Carousal from "../Components/Carousal";
 import Credit from "./Credit";
 import GiftCard from './GiftCard'
 
-
 const Home = () => {
   return (
     <>
       <Navbar />
       <Header />
-
       <Corporates />
       <CardCarousal />
       <MovieCarousal />
@@ -24,6 +22,7 @@ const Home = () => {
       <Offers />
      <GiftCard/>
      <Credit />
+
     </>
   );
 };
