@@ -8,7 +8,7 @@ import React from 'react';
 // import Carousal from '../Components/Carousal';
 // import Credit from './Credit';
 // import Offers from './Offers';
-// import LogIn from './LogIn';
+import LogIn from './LogIn';
 import SignIn from './SignIn';
 // import Credit from './Credit'
 // import GiftCard from './GiftCard'
