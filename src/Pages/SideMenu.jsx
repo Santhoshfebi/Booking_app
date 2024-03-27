@@ -25,12 +25,12 @@ export default function SideMenu() {
           </button>
         </div>
         <div className="flex p-3 hover:bg-gray-200 border border-gray-100">
-          <div class="flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full">
+          <div className="flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full">
             <svg
               width="20"
               height="20"
               viewBox="1 0 22 22"
-              class="fill-current text-gray-800"
+              className="fill-current text-gray-800"
             >
               <path
                 fill-rule="evenodd"
@@ -38,110 +38,110 @@ export default function SideMenu() {
               />
             </svg>
           </div>
-          <div class="ml-2 text-gray-800">Notifications</div>
-          <div class="ml-auto flex items-center">
-            <svg width="6" height="11" class="fill-current text-gray-700">
+          <div className="ml-2 text-gray-800">Notifications</div>
+          <div className="ml-auto flex items-center">
+            <svg width="6" height="11" className="fill-current text-gray-700">
               <title>Right Arrow</title>
               <path d="M.627.958a.572.572 0 0 1 0-.747.447.447 0 0 1 .679 0l4.04 4.469a.569.569 0 0 1 0 .75L1.307 9.9a.447.447 0 0 1-.68 0 .572.572 0 0 1 0-.747l3.706-4.097L.627.958z" />
             </svg>
           </div>
         </div>
         <div className="flex p-3 border border-gray-100">
-        <div class="flex items-center ml-1">
+        <div className="flex items-center ml-1">
         <img src="https://assets-in.bmscdn.com/members/common/icons/purchasehistory.png" className="w-5 h-5 "/>
         </div>
         <div className="ml-4">
-            <div class=" text-gray-800">Your Orders</div>
-            <div class="text-gray-800 text-xs">View all your bookings & purchases</div>
+            <div className=" text-gray-800">Your Orders</div>
+            <div className="text-gray-800 text-xs">View all your bookings & purchases</div>
         </div>
-        <button class="ml-auto focus:outline-none" >
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current text-gray-600" viewBox="0 0 24 24" >
+        <button className="ml-auto focus:outline-none" >
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 fill-current text-gray-600" viewBox="0 0 24 24" >
             <path fill-rule="evenodd" d="M12 2a4 4 0 0 1 4 4v2h1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h1V6a4 4 0 0 1 4-4zm5 7H7a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V10a1 1 0 0 0-1-1zm-5 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-11a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3z"/>
         </svg>
     </button>
         </div>
         <div className="flex p-3 border border-gray-100">
-        <div class="flex items-center ml-1">
+        <div className="flex items-center ml-1">
         <img src="https://assets-in.bmscdn.com/members/common/icons/streamlibrary_2.png" className="w-5 h-5 "/>
         </div>
         <div className="ml-4">
-            <div class=" text-gray-800">Stream Library</div>
-            <div class="text-gray-800 text-xs">Rented & Purchased Movies</div>
+            <div className=" text-gray-800">Stream Library</div>
+            <div className="text-gray-800 text-xs">Rented & Purchased Movies</div>
         </div>
-        <button class="ml-auto focus:outline-none" >
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current text-gray-600" viewBox="0 0 24 24" >
+        <button className="ml-auto focus:outline-none" >
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 fill-current text-gray-600" viewBox="0 0 24 24" >
             <path fill-rule="evenodd" d="M12 2a4 4 0 0 1 4 4v2h1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h1V6a4 4 0 0 1 4-4zm5 7H7a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V10a1 1 0 0 0-1-1zm-5 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-11a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3z"/>
         </svg>
     </button>
         </div>
         <div className="flex p-3 border border-gray-100">
-        <div class="flex items-center ml-1">
+        <div className="flex items-center ml-1">
         <img src="https://assets-in.bmscdn.com/members/common/icons/playcreditcard.png" className="w-5 h-5 "/>
         </div>
         <div className="ml-4">
-            <div class=" text-gray-800">Play Credit Card</div>
-            <div class="text-gray-800 text-xs">View your Play Credit Card details and offers</div>
+            <div className=" text-gray-800">Play Credit Card</div>
+            <div className="text-gray-800 text-xs">View your Play Credit Card details and offers</div>
         </div>
-        <div class="ml-auto flex items-center">
-            <svg width="6" height="11" class="fill-current text-gray-700">
+        <div className="ml-auto flex items-center">
+            <svg width="6" height="11" className="fill-current text-gray-700">
               <title>Right Arrow</title>
               <path d="M.627.958a.572.572 0 0 1 0-.747.447.447 0 0 1 .679 0l4.04 4.469a.569.569 0 0 1 0 .75L1.307 9.9a.447.447 0 0 1-.68 0 .572.572 0 0 1 0-.747l3.706-4.097L.627.958z" />
             </svg>
           </div>
         </div>
         <div className="flex p-3 border border-gray-100">
-        <div class="flex items-center ml-1">
+        <div className="flex items-center ml-1">
         <img src="https://assets-in.bmscdn.com/members/common/icons/helpandsupport.png" className="w-5 h-5 "/>
         </div>
         <div className="ml-4">
-            <div class=" text-gray-800">Help & Support</div>
-            <div class="text-gray-800 text-xs">View commonly asked queries and Chat</div>
+            <div className=" text-gray-800">Help & Support</div>
+            <div className="text-gray-800 text-xs">View commonly asked queries and Chat</div>
         </div>
-        <div class="ml-auto flex items-center">
-            <svg width="6" height="11" class="fill-current text-gray-700">
+        <div className="ml-auto flex items-center">
+            <svg width="6" height="11" className="fill-current text-gray-700">
               <title>Right Arrow</title>
               <path d="M.627.958a.572.572 0 0 1 0-.747.447.447 0 0 1 .679 0l4.04 4.469a.569.569 0 0 1 0 .75L1.307 9.9a.447.447 0 0 1-.68 0 .572.572 0 0 1 0-.747l3.706-4.097L.627.958z" />
             </svg>
           </div>
         </div>
         <div className="flex p-3 border border-gray-100">
-        <div class="flex items-center ml-1">
+        <div className="flex items-center ml-1">
         <img src="https://assets-in.bmscdn.com/members/common/icons/accountandsettings.png" className="w-5 h-5 "/>
         </div>
         <div className="ml-4">
-            <div class=" text-gray-800">Accounts & Settings</div>
-            <div class="text-gray-800 text-xs">Location, Payments, Permissions & More</div>
+            <div className=" text-gray-800">Accounts & Settings</div>
+            <div className="text-gray-800 text-xs">Location, Payments, Permissions & More</div>
         </div>
-        <button class="ml-auto focus:outline-none" >
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current text-gray-600" viewBox="0 0 24 24" >
+        <button className="ml-auto focus:outline-none" >
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 fill-current text-gray-600" viewBox="0 0 24 24" >
             <path fill-rule="evenodd" d="M12 2a4 4 0 0 1 4 4v2h1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h1V6a4 4 0 0 1 4-4zm5 7H7a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V10a1 1 0 0 0-1-1zm-5 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-11a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3z"/>
         </svg>
     </button>
         </div>
         <div className="flex p-3 border border-gray-100">
-        <div class="flex items-center ml-1">
+        <div className="flex items-center ml-1">
         <img src="https://assets-in.bmscdn.com/members/common/icons/rewards_1.png" className="w-5 h-5 "/>
         </div>
         <div className="ml-4">
-            <div class=" text-gray-800">Rewards</div>
-            <div class="text-gray-800 text-xs">View your rewards & unlock new ones</div>
+            <div className=" text-gray-800">Rewards</div>
+            <div className="text-gray-800 text-xs">View your rewards & unlock new ones</div>
         </div>
-        <div class="ml-auto flex items-center">
-            <svg width="6" height="11" class="fill-current text-gray-700">
+        <div className="ml-auto flex items-center">
+            <svg width="6" height="11" className="fill-current text-gray-700">
               <title>Right Arrow</title>
               <path d="M.627.958a.572.572 0 0 1 0-.747.447.447 0 0 1 .679 0l4.04 4.469a.569.569 0 0 1 0 .75L1.307 9.9a.447.447 0 0 1-.68 0 .572.572 0 0 1 0-.747l3.706-4.097L.627.958z" />
             </svg>
           </div>
         </div>
         <div className="flex p-3 border border-gray-100">
-        <div class="flex items-center ml-1">
+        <div className="flex items-center ml-1">
         <img src="https://assets-in.bmscdn.com/members/common/icons/bookasmile.png" className="w-5 h-5 "/>
         </div>
         <div className="ml-4">
-            <div class=" text-gray-800">BookASmile</div>
+            <div className=" text-gray-800">BookASmile</div>
         </div>
-        <div class="ml-auto flex items-center">
-            <svg width="6" height="11" class="fill-current text-gray-700">
+        <div className="ml-auto flex items-center">
+            <svg width="6" height="11" className="fill-current text-gray-700">
               <title>Right Arrow</title>
               <path d="M.627.958a.572.572 0 0 1 0-.747.447.447 0 0 1 .679 0l4.04 4.469a.569.569 0 0 1 0 .75L1.307 9.9a.447.447 0 0 1-.68 0 .572.572 0 0 1 0-.747l3.706-4.097L.627.958z" />
             </svg>
