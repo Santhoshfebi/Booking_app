@@ -135,6 +135,7 @@ const Credit = () => {
       <div className="p-4 ">
         <div className="p-4 flex flex-wrap">
           <div className="bg-white rounded-lg shadow-md w-full md:w-[calc(50%-0.5rem)] text-justify md:mr-4 md:mb-0 mb-4">
+            {/* About the offer */}
             <div className="px-4 py-2 border-b border-gray-200">
               <h6 className="text-lg font-semibold text-gray-700">
                 ABOUT THE OFFER
@@ -159,7 +160,8 @@ const Credit = () => {
                 </ol>
               </div>
             </div>
-            <aside className="px-4 py-4 border-b border-gray-200">
+            {/* How to avail offer */}
+            <div className="px-4 py-4 border-b border-gray-200">
               <h6 className="text-lg font-semibold text-gray-700">
                 HOW TO AVAIL THE OFFER
               </h6>
@@ -197,8 +199,103 @@ const Credit = () => {
                   enter your name on the card, expiry date and CVV card details
                 </li>
               </ol>
-            </aside>
+            </div>
+            {/* Terms and Conditions */}
+          <div className="px-4 py-4 border-b border-gray-200 ">
+            <div
+              className="flex items-center  cursor-pointer pb-3 "
+              onClick={handleClick}
+            >
+              <div className="w-4  pt-1">
+                <i className={`fi ${icon}`}></i>
+              </div>
+              <div className="text-lg font-semibold text-gray-700 pl-3">
+                Terms and Condition
+              </div>
+            </div>
+            <ul className={termsListClasses}>
+              <li className="my-2">
+                For precise eligibility terms and conditions for this offer,
+                please see the FAQs
+              </li>
+              <li className="my-2">
+                In case you have applied for the discount but the transaction
+                doesn't go through for some reason, kindly wait for 20 minutes
+                before trying to avail the discount again
+              </li>
+              <li className="my-2">
+                This offer is valid only for users coming directly to the
+                BookMyShow Website and not via individual cinema sites
+              </li>
+              <li className="my-2">
+                Offer is applicable only for bookings for cinema tickets made on
+                the BookMyShow website bookmyshow.com and the BookMyShow App
+              </li>
+              <li className="my-2">
+                The offer cannot be combined with any offer/discounts/promotions
+                at the theatres available on bookmyshow.com
+              </li>
+              <li className="my-2">
+                Tickets are subject to availability at the cinema
+              </li>
+              <li className="my-2">
+                Tickets once bought on line, shall be considered sold and cannot
+                be cancelled, refunded or exchanged
+              </li>
+              <li className="my-2">
+                Once the booking is committed, the confirmation mail/SMS
+                received from BookMyShow needs to be exchanged with the ticket
+                available at the theatre
+              </li>
+              <li className="my-2">
+                Customers shall not be entitled to compensation/benefits in any
+                form whatsoever in lieu of the offer being availed
+              </li>
+              <li className="my-2">
+                Bigtree & SBI Card reserves the right to disqualify any
+                customer/s from the benefits of the program. If case of any
+                fraudulent activity, prosecution will be carried according to
+                the purpose of availing the benefits under the program
+              </li>
+              <li className="my-2">
+                Bigtree & SBI Card reserves the right to modify/change all or
+                any of the terms applicable to the program without assigning any
+                reasons or without any prior intimation whatsoever
+              </li>
+              <li className="my-2">
+                Bigtree & SBI Card also reserves the right to discontinue the
+                program without assigning any reasons or without any prior
+                intimation whatsoever
+              </li>
+              <li className="my-2">Individual cinema rules applicable</li>
+              <li className="my-2">
+                The SBI Card customers are not bound in any way to participate
+                in this program. Any such participation is voluntary and the
+                same is being made purely on a "best effort basis"
+              </li>
+              <li className="my-2">
+                Bigtree & SBI Card reserves the right at any time without prior
+                notice to add, alter, modify, all or any of these terms and
+                conditions or replace, wholly or in part, this program by any
+                other program, whether similar to this program or not or to
+                withdraw it altogether
+              </li>
+              <li className="my-2">
+                In addition to the above, this offer on the website is also
+                subject to BookMyShow's general Terms of Use. Kindly refer to
+                BookMyShow's Terms & Conditions on the homepage
+              </li>
+              <li className="my-2">
+                Customers shall be required to give personal information and
+                card details on line for the tickets purchased on bookmyshow.com
+              </li>
+              <li className="my-2">
+                In case of any disputes, Bigtree's decision will be final
+              </li>
+            </ul>
           </div>
+          </div>
+          {/* FAQ */}
           <div className="bg-white rounded-lg shadow-md w-full md:w-[calc(50%-0.5rem)] ">
             <div className="px-4 py-2">
               <div className="flex items-center justify-between">
@@ -474,99 +571,7 @@ const Credit = () => {
               </div>
             </div>
           </div>
-          <div className="bg-white rounded-lg shadow-md w-full md:w-[calc(50%-0.5rem)] text-start mt-4 md:mt-0 px-4 py-2 ">
-            <div
-              className="flex items-center  cursor-pointer pb-3 "
-              onClick={handleClick}
-            >
-              <div className="w-4  pt-1">
-                <i className={`fi ${icon}`}></i>
-              </div>
-              <div className="text-lg font-semibold text-gray-700 pl-3">
-                Terms and Condition
-              </div>
-            </div>
-            <ul className={termsListClasses}>
-              <li className="my-2">
-                For precise eligibility terms and conditions for this offer,
-                please see the FAQs
-              </li>
-              <li className="my-2">
-                In case you have applied for the discount but the transaction
-                doesn't go through for some reason, kindly wait for 20 minutes
-                before trying to avail the discount again
-              </li>
-              <li className="my-2">
-                This offer is valid only for users coming directly to the
-                BookMyShow Website and not via individual cinema sites
-              </li>
-              <li className="my-2">
-                Offer is applicable only for bookings for cinema tickets made on
-                the BookMyShow website bookmyshow.com and the BookMyShow App
-              </li>
-              <li className="my-2">
-                The offer cannot be combined with any offer/discounts/promotions
-                at the theatres available on bookmyshow.com
-              </li>
-              <li className="my-2">
-                Tickets are subject to availability at the cinema
-              </li>
-              <li className="my-2">
-                Tickets once bought on line, shall be considered sold and cannot
-                be cancelled, refunded or exchanged
-              </li>
-              <li className="my-2">
-                Once the booking is committed, the confirmation mail/SMS
-                received from BookMyShow needs to be exchanged with the ticket
-                available at the theatre
-              </li>
-              <li className="my-2">
-                Customers shall not be entitled to compensation/benefits in any
-                form whatsoever in lieu of the offer being availed
-              </li>
-              <li className="my-2">
-                Bigtree & SBI Card reserves the right to disqualify any
-                customer/s from the benefits of the program. If case of any
-                fraudulent activity, prosecution will be carried according to
-                the purpose of availing the benefits under the program
-              </li>
-              <li className="my-2">
-                Bigtree & SBI Card reserves the right to modify/change all or
-                any of the terms applicable to the program without assigning any
-                reasons or without any prior intimation whatsoever
-              </li>
-              <li className="my-2">
-                Bigtree & SBI Card also reserves the right to discontinue the
-                program without assigning any reasons or without any prior
-                intimation whatsoever
-              </li>
-              <li className="my-2">Individual cinema rules applicable</li>
-              <li className="my-2">
-                The SBI Card customers are not bound in any way to participate
-                in this program. Any such participation is voluntary and the
-                same is being made purely on a "best effort basis"
-              </li>
-              <li className="my-2">
-                Bigtree & SBI Card reserves the right at any time without prior
-                notice to add, alter, modify, all or any of these terms and
-                conditions or replace, wholly or in part, this program by any
-                other program, whether similar to this program or not or to
-                withdraw it altogether
-              </li>
-              <li className="my-2">
-                In addition to the above, this offer on the website is also
-                subject to BookMyShow's general Terms of Use. Kindly refer to
-                BookMyShow's Terms & Conditions on the homepage
-              </li>
-              <li className="my-2">
-                Customers shall be required to give personal information and
-                card details on line for the tickets purchased on bookmyshow.com
-              </li>
-              <li className="my-2">
-                In case of any disputes, Bigtree's decision will be final
-              </li>
-            </ul>
-          </div>
+          
         </div>
       </div>
 
