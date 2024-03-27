@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Offers = () => {
   return (
@@ -82,12 +83,12 @@ const Offers = () => {
 
       <div id="cards" className=" p-8 flex justify-center gap-4 bg-gray-100 ">
         <div className="flex  gap-3 px-2 py-2">
-
+          
           <div
             id="card"
             className="relative rounded-lg shadow-2xl z-10 cursor-pointer group"
           >
-
+            <Link to={'../credit'}>
             <div
               id="photo"
               className="relative rounded-t-lg overflow-hidden h-[270px] "
@@ -157,7 +158,7 @@ const Offers = () => {
                   <div className="text-xs">31 Mar 2026 23:59</div>
                 </div>
               </div>
-            </div>
+            </div></Link>
           </div>
           <div
             id="card"
@@ -417,14 +418,13 @@ const Offers = () => {
         </div>
 
       </div>
-      <div className="text-xs py-3 text-gray-400 text-start ml-16">Online Tickets &rarr; Offers</div>
-
-      <div className="bg-gray-100 flex items-center justify-center">
+    </div>
+    <div className="text-xs py-3 text-gray-400 text-start ml-16">Online Tickets &rarr; Offers</div>
+    <div className="bg-gray-100 flex items-center justify-center">
         <div className="w-[90%] "> 
         <div className="py-4"><h2 className="text-lg text-gray-500 text-start"><b>Privacy Note</b> </h2></div>
         <div className="pb-6"><div class="text-justify text-sm text-gray-400">By using www.bookmyshow.com(our website), you are fully accepting the Privacy Policy available at <a href="/privacy"    className="text-red-600">https://bookmyshow.com/privacy</a> governing your access to Bookmyshow and provision of services by Bookmyshow to you. If you do not accept terms mentioned in the <a href="/privacy" className="text-red-600">Privacy Policy</a>, you must not share any of your personal information and immediately exit Bookmyshow.</div></div>
       </div></div>
-    </div>
     </div>
   );
 };

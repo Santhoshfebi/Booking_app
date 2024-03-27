@@ -1,16 +1,19 @@
 
 import './App.css';
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home';
-
+import Offers from './Pages/Offers';
+import Credit from './Pages/Credit'
 
 function App() {
   return (
-    <div className="App">
-      {/* <h1 > Book My Show App</h1> */}
-      <Home />
-
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/offers" element={<Offers />} />
+        <Route path="/credit" element={<Credit />}/>
+      </Routes>
+    </Router>
   );
 }
 
