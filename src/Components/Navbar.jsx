@@ -1,6 +1,13 @@
-import React from 'react'
-import bmslogo from "../Resources/bms-logo.png"
+import React, { useState } from 'react';
+import { Modal } from 'react-bootstrap'; 
+import bmslogo from "../Resources/bms-logo.png";
+import Login from '../Pages/LogIn';
+
 const Navbar = () => {
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const handleLoginModalOpen = () => setShowLoginModal(true);
+  const handleLoginModalClose = () => setShowLoginModal(false);
+
   return (
     <nav className='h-18 flex justify-between px-36 '>
       <div className=' flex items-center my-1'>
@@ -16,10 +23,19 @@ const Navbar = () => {
           <i className="bi bi-chevron-down text-xs"></i>
         </div>
         <div className='flex gap-4 items-center'>
-          <button className=' bg-[#F84464] rounded-[5px] text-[12px] text-white px-4 py-1'>Sign in</button>
-          <i className="bi bi-list text-2xl"></i>
-        </div>
+        <button onClick={handleLoginModalOpen} className=' bg-[#F84464] rounded-[5px] text-[12px] text-white px-4 py-1'>Sign in</button>
+        <i className="bi bi-list text-2xl"></i>
       </div>
+      </div>
+      
+      <Modal show={showLoginModal} onHide={handleLoginModalClose}>
+        <Modal.Header closeButton>
+          
+        </Modal.Header>
+        <Modal.Body>
+          <Login />
+        </Modal.Body>
+      </Modal>
     </nav>
   )
 }
