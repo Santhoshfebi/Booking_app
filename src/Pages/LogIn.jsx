@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import axios from 'axios';
 import bmsLogo from "../Resources/bms-logo.png";
@@ -43,6 +44,7 @@ export default function Login() {
         <div className="h-full w-full relative">
           <img src={loginBackground} alt="" className="h-full w-full object-cover" />
         </div>
+
         <form className="bg-black bg-opacity-70 flex flex-col gap-6 absolute px-3 py-3 rounded-lg" onSubmit={handleSubmit}>
           <div className="h-14 w-36 ml-24">
             <img src={bmsLogo} alt="" className="w-full h-full" />
@@ -71,11 +73,13 @@ export default function Login() {
               type="password"
               placeholder="Confirm Password"
               name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} required // Added confirmPassword input
+
               className="bg-gray-100 w-[80%] text-sm h-7 rounded-md p-4 focus:outline-none"
             />
             <input
               type="text"
               placeholder="Mobile Number"
+
               name="mobile_no" value={formData.mobile_no} onChange={handleChange} required
               className="bg-gray-100 w-[80%] text-sm h-7 rounded-md p-4 focus:outline-none"
             />
@@ -86,6 +90,7 @@ export default function Login() {
 
           </div>
         </form>
+
       </div>
     </div>
   );

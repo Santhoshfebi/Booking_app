@@ -1,5 +1,4 @@
 
-
 import React from 'react';
 import Navbar from '../Components/Navbar';
 import Header from '../Components/Header';
@@ -12,6 +11,7 @@ import Header from '../Components/Header';
 import LogIn from './LogIn';
 import SignIn from './SignIn';
 // import GiftCard from './GiftCard'
+
 
 const Home = () => {
   return (
