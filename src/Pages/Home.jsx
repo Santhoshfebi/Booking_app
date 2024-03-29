@@ -1,5 +1,4 @@
 
-
 import React from 'react';
 // import Navbar from '../Components/Navbar';
 // import Header from '../Components/Header';
@@ -13,6 +12,7 @@ import React from 'react';
 // import SignIn from './SignIn';
 // import GiftCard from './GiftCard'
 import SideMenu from './SideMenu';
+
 const Home = () => {
   return (
     <>
