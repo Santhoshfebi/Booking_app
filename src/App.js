@@ -5,6 +5,7 @@ import Home from './Pages/Home';
 import Offers from './Pages/Offers';
 import ListYourShow from './Pages/ListYourShow';
 import Credit from './Pages/Credit'
+import GiftCard from './Pages/GiftCard';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/offers" element={<Offers />} />
         <Route path="/ListYourShow" element={<ListYourShow />} />
         <Route path="/offers/credit" element={<Credit />}/>
+        <Route path="/GiftCard" element={<GiftCard />}/>
       </Routes>
     </Router>
   );
