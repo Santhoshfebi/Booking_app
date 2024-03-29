@@ -444,7 +444,7 @@ const ListYourShow = () => {
               <h1 id="sitbackH1">Sit back and watch your event come to life</h1>
               <p id="sitBackP">
                 Events maybe all fun and games, but we take it seriously. We
-                ensure our customer’s security so that you don’t have to.
+                ensure our customer’s security so that you don’t have to
               </p>
             </div>
           </div>
