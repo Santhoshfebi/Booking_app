@@ -29,7 +29,9 @@ const Header = () => {
           <li>
             <Link to={"./offers"}>Offers</Link>{" "}
           </li>
-          <li>Gift Cards</li>
+          <li>
+            <Link to={"./GiftCard"}>GiftCard</Link>{" "}
+          </li>
         </ul>
       </div>
     </div>
