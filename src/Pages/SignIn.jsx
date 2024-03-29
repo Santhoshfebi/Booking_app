@@ -56,12 +56,13 @@ export default function SignIn() {
             <div className="text-xs text-white">By signing up,you agree to our <a href="" className="text-red-500 underline">Terms of use</a> and <a href="" className="text-red-500 underline">Privacy Policy</a>.</div>
             <button type="submit" className="w-[90%] rounded-md bg-[#F84464] text-white text-sm h-8">SIGN IN</button>
             <div className="font-semibold text-sm text-white">New member? <a href="" className="text-red-500 italic underline">SignUp</a></div>
+
             {loginStatus && <p>{loginStatus}</p>}
         </form>
-        
-      </div>
+            <div><a href="" className="font-semibold text-sm text-white pb-">Forgot Password?</a></div>
+        </div>
     
-  </div>
+    </div>
   </div>
   )
 }

@@ -1,8 +1,7 @@
 
-
 import React from 'react';
-import Navbar from '../Components/Navbar';
-import Header from '../Components/Header';
+// import Navbar from '../Components/Navbar';
+// import Header from '../Components/Header';
 // import Corporates from './Corporates';
 // import MovieCarousal from '../Components/MovieCarousal';
 // import CardCarousal from '../Components/CardCarousal';
@@ -10,14 +9,15 @@ import Header from '../Components/Header';
 // import Credit from './Credit';
 // import Offers from './Offers';
 // import LogIn from './LogIn';
-import SignIn from './SignIn';
+// import SignIn from './SignIn';
 // import GiftCard from './GiftCard'
+import SideMenu from './SideMenu';
 
 const Home = () => {
   return (
     <>
-      <Navbar />
-      <Header />
+      {/* <Navbar /> */}
+      {/* <Header /> */}
       {/* <Corporates /> */}
       {/* <Corporates /> */}
       {/* <CardCarousal /> */}
@@ -27,9 +27,9 @@ const Home = () => {
       {/* <Credit /> */}
      {/* <GiftCard/>
      <Credit /> */}
-     <SignIn />
+     {/* <SignIn /> */}
      {/* <LogIn /> */}
-
+     <SideMenu />
     </>
   );
 };
