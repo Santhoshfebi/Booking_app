@@ -23,8 +23,17 @@ const Header = () => {
       <div className="ml-20">
         <ul className="flex items-center justify-center gap-4 text-xs">
           <li>
-            <Link to={"./ListYourShow"}>ListYourShow</Link>{" "}
+            <a
+              href="/ListYourShow"
+              className="text-black-500 hover:underline"
+              style={{ textDecoration: "none" }}
+            >
+              <span className="show-link-text hover:underline">
+                ListYourShow
+              </span>
+            </a>
           </li>
+
           <li>Corporates</li>
           <li>
             <Link to={"./offers"}>Offers</Link>{" "}
