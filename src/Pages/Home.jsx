@@ -9,7 +9,7 @@ import Header from '../Components/Header';
 // import Carousal from '../Components/Carousal';
 // import Credit from './Credit';
 // import Offers from './Offers';
-import LogIn from './LogIn';
+// import LogIn from './LogIn';
 import SignIn from './SignIn';
 // import GiftCard from './GiftCard'
 
@@ -28,7 +28,7 @@ const Home = () => {
      {/* <GiftCard/>
      <Credit /> */}
      <SignIn />
-     <LogIn />
+     {/* <LogIn /> */}
 
     </>
   );
