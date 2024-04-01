@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React from "react";
 // import Navbar from '../Components/Navbar';
 // import Header from '../Components/Header';
 // import Corporates from './Corporates';
@@ -11,7 +10,9 @@ import React from 'react';
 // import LogIn from './LogIn';
 // import SignIn from './SignIn';
 // import GiftCard from './GiftCard'
-import SideMenu from './SideMenu';
+import SideMenu from "./SideMenu";
+import Addmovie from "../Dashboardcont/Addmovie";
+import Dash from "../Dashboardcont/Dash";
 
 const Home = () => {
   return (
@@ -25,11 +26,13 @@ const Home = () => {
       {/* <Carousal /> */}
       {/* <Offers /> */}
       {/* <Credit /> */}
-     {/* <GiftCard/>
+      {/* <GiftCard/>
      <Credit /> */}
-     {/* <SignIn /> */}
-     {/* <LogIn /> */}
-     <SideMenu />
+      {/* <SignIn /> */}
+      {/* <LogIn /> */}
+      <SideMenu />
+      {/* <Dash /> */}
+      <Addmovie />
     </>
   );
 };
