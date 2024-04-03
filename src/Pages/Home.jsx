@@ -14,7 +14,7 @@ import Registration from './Registration';
 // import SideMenu from "./SideMenu";
 // import Dash from "../Dashboardcont/Dash";
 // import AddMovie from "../Dashboardcont/AddMovie";
-
+import BuyTickets from "./BuyTickets";
 
 const Home = () => {
   return (
@@ -36,6 +36,8 @@ const Home = () => {
       {/* <Dash /> */}
       {/* <AddMovie /> */}
       {/* <Payment /> */}
+      <BuyTickets />
+      {/* <Addmovie /> */}
     </>
   );
 };
