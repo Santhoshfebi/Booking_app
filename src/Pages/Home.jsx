@@ -13,6 +13,7 @@ import React from "react";
 import SideMenu from "./SideMenu";
 import Addmovie from "../Dashboardcont/Addmovie";
 import Dash from "../Dashboardcont/Dash";
+import BuyTickets from "./BuyTickets";
 
 const Home = () => {
   return (
@@ -30,9 +31,10 @@ const Home = () => {
      <Credit /> */}
       {/* <SignIn /> */}
       {/* <LogIn /> */}
-      <SideMenu />
+      <BuyTickets />
+      {/* <SideMenu /> */}
       {/* <Dash /> */}
-      <Addmovie />
+      {/* <Addmovie /> */}
     </>
   );
 };
