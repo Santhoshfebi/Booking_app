@@ -1,0 +1,21 @@
+{
+  "name": "bookmyshowbe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon bmsserver.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.0.0-beta.2",
+    "cors": "^2.8.5",
+    "express": "^5.0.0-beta.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.9.2",
+    "nodemon": "^3.1.0"
+  }
+}

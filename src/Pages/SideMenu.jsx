@@ -12,7 +12,7 @@ export default function SideMenu() {
             <div className="h-10 w-14 rounded-full">
               <img
                 src="https://in.bmscdn.com/webin/movies/superstar/rewards_login.png"
-                alt=""
+                alt="rewards_login"
                 className="h-full w-full object-cover rounded-full"
               />
             </div>
@@ -48,7 +48,7 @@ export default function SideMenu() {
         </div>
         <div className="flex p-3 border border-gray-100">
         <div className="flex items-center ml-1">
-        <img src="https://assets-in.bmscdn.com/members/common/icons/purchasehistory.png" className="w-5 h-5 "/>
+        <img src="https://assets-in.bmscdn.com/members/common/icons/purchasehistory.png" alt="purchasehistory" className="w-5 h-5 "/>
         </div>
         <div className="ml-4">
             <div className=" text-gray-800">Your Orders</div>
@@ -62,7 +62,7 @@ export default function SideMenu() {
         </div>
         <div className="flex p-3 border border-gray-100">
         <div className="flex items-center ml-1">
-        <img src="https://assets-in.bmscdn.com/members/common/icons/streamlibrary_2.png" className="w-5 h-5 "/>
+        <img src="https://assets-in.bmscdn.com/members/common/icons/streamlibrary_2.png" alt="stream_library" className="w-5 h-5 "/>
         </div>
         <div className="ml-4">
             <div className=" text-gray-800">Stream Library</div>
@@ -76,7 +76,7 @@ export default function SideMenu() {
         </div>
         <div className="flex p-3 border border-gray-100">
         <div className="flex items-center ml-1">
-        <img src="https://assets-in.bmscdn.com/members/common/icons/playcreditcard.png" className="w-5 h-5 "/>
+        <img src="https://assets-in.bmscdn.com/members/common/icons/playcreditcard.png" alt="play_credit_card" className="w-5 h-5 "/>
         </div>
         <div className="ml-4">
             <div className=" text-gray-800">Play Credit Card</div>
@@ -91,7 +91,7 @@ export default function SideMenu() {
         </div>
         <div className="flex p-3 border border-gray-100">
         <div className="flex items-center ml-1">
-        <img src="https://assets-in.bmscdn.com/members/common/icons/helpandsupport.png" className="w-5 h-5 "/>
+        <img src="https://assets-in.bmscdn.com/members/common/icons/helpandsupport.png" alt="help_and_support" className="w-5 h-5 "/>
         </div>
         <div className="ml-4">
             <div className=" text-gray-800">Help & Support</div>
@@ -106,7 +106,7 @@ export default function SideMenu() {
         </div>
         <div className="flex p-3 border border-gray-100">
         <div className="flex items-center ml-1">
-        <img src="https://assets-in.bmscdn.com/members/common/icons/accountandsettings.png" className="w-5 h-5 "/>
+        <img src="https://assets-in.bmscdn.com/members/common/icons/accountandsettings.png" alt="acc_and_setting" className="w-5 h-5 "/>
         </div>
         <div className="ml-4">
             <div className=" text-gray-800">Accounts & Settings</div>
@@ -120,7 +120,7 @@ export default function SideMenu() {
         </div>
         <div className="flex p-3 border border-gray-100">
         <div className="flex items-center ml-1">
-        <img src="https://assets-in.bmscdn.com/members/common/icons/rewards_1.png" className="w-5 h-5 "/>
+        <img src="https://assets-in.bmscdn.com/members/common/icons/rewards_1.png" alt="rewards" className="w-5 h-5 "/>
         </div>
         <div className="ml-4">
             <div className=" text-gray-800">Rewards</div>
@@ -135,7 +135,7 @@ export default function SideMenu() {
         </div>
         <div className="flex p-3 border border-gray-100">
         <div className="flex items-center ml-1">
-        <img src="https://assets-in.bmscdn.com/members/common/icons/bookasmile.png" className="w-5 h-5 "/>
+        <img src="https://assets-in.bmscdn.com/members/common/icons/bookasmile.png" alt="book_asmile" className="w-5 h-5 "/>
         </div>
         <div className="ml-4">
             <div className=" text-gray-800">BookASmile</div>

@@ -1,10 +1,9 @@
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import bmsLogo from "../Resources/bms-logo.png";
 import loginBackground from "../Resources/login.webp";
 
-export default function Login() {
+export default function Registration() {
   const [formData, setFormData] = useState({
     fullname: '',
     emailid: '',
@@ -13,7 +12,7 @@ export default function Login() {
     mobile_no: ''
   });
 
-  const [error, setError] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,19 +24,18 @@ export default function Login() {
 
     // Check if passwords match
     if (formData.password !== formData.confirmPassword) {
-      setError('Passwords do not match');
+      setMessage('Passwords do not match');
       return;
     }
 
     try {
       const response = await axios.post('http://localhost:3001/register', formData);
-      console.log('User registered successfully');
-      // You can redirect the user or display a success message here
+      setMessage(response.data); // Update message state with response from the server
     } catch (error) {
       console.error('Error registering user:', error);
+      setMessage('An error occurred');
     }
   };
-
   return (
     <div className="flex items-center justify-center py-10 outline-none">
       <div className="h-[500px] w-[60%] flex rounded-lg overflow-hidden shadow-2xl justify-center items-center relative">
@@ -49,7 +47,7 @@ export default function Login() {
           <div className="h-14 w-36 ml-24">
             <img src={bmsLogo} alt="" className="w-full h-full" />
           </div>
-          <div className="cont flex gap-4 flex-col items-center text-white">
+          <div className="cont flex gap-4 flex-col items-center text-black">
             <input
               type="text"
               placeholder="Full Name"
@@ -79,18 +77,15 @@ export default function Login() {
             <input
               type="text"
               placeholder="Mobile Number"
-
               name="mobile_no" value={formData.mobile_no} onChange={handleChange} required
               className="bg-gray-100 w-[80%] text-sm h-7 rounded-md p-4 focus:outline-none"
             />
-            {error && <p style={{ color: 'red' }}>{error}</p>} {/* Display error message */}
-            <div className="text-xs">By signing up, you agree to our <a href="" className="text-red-500 underline">Terms of use</a> and <a href="" className="text-red-500 underline">Privacy Policy</a>.</div>
+            {message && <p style={{ color: 'red' }}>{message}</p>} {/* Display message */}
+            <div className="text-xs text-white">By signing up, you agree to our <span className="text-red-500 underline">Terms of use</span> and <span className="text-red-500 underline">Privacy Policy</span>.</div>
             <button type='submit' className="w-[90%] rounded-md bg-[#F84464] text-white text-sm h-8">Sign Up</button>
-            <div className="font-semibold text-sm pb-4">Already a member? <a href="" className="text-red-500 italic underline">Login</a></div>
-
+            <div className="font-semibold text-sm pb-4 text-white">Already a member? <span className="text-red-500 italic underline">Login</span></div>
           </div>
         </form>
-
       </div>
     </div>
   );

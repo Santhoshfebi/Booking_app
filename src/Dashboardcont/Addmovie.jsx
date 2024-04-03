@@ -1,7 +1,7 @@
 import React from "react";
 import loggg from "../Resources/bms-logo.png";
 
-const Addmovie = () => {
+const AddMovie = () => {
   return (
     <div>
       <div className="dashnav w-screen h-24 bg-white flex overflow-hidden sticky top-0">
@@ -168,4 +168,4 @@ const Addmovie = () => {
   );
 };
 
-export default Addmovie;
+export default AddMovie;

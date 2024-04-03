@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Modal } from 'react-bootstrap'; 
 import bmslogo from "../Resources/bms-logo.png";
-import Login from '../Pages/LogIn';
+
+import SignIn from '../Pages/SignIn';
 
 const Navbar = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -33,7 +34,7 @@ const Navbar = () => {
           
         </Modal.Header>
         <Modal.Body>
-          <Login />
+          <SignIn />
         </Modal.Body>
       </Modal>
     </nav>

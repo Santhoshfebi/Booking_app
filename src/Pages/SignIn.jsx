@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import loginBackground from "../Resources/login.webp";
 import bmsLogo from "../Resources/bms-logo.png";
+import Dash from '../Dashboardcont/Dash';
 
 export default function SignIn() {
   const [formData, setFormData] = useState({
@@ -9,17 +10,23 @@ export default function SignIn() {
     password: ''
   });
   const [loginStatus, setLoginStatus] = useState('');
+  const [userRole, setUserRole] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({ ...prevState, [name]: value }));
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:3001/login', formData);
-      if (response.data === 'Login successful') {
-        setLoginStatus('Login successful');
+      if (response.data === 'admin') {
+        // Redirect to dashboard
+        setUserRole('admin'); 
+      } else if (response.data === 'user') {
+        // Redirect to website
+        setUserRole('user');
       } else {
         setLoginStatus('Incorrect email or password');
       }
@@ -28,6 +35,9 @@ export default function SignIn() {
       setLoginStatus('An error occurred');
     }
   };
+  if (userRole) {
+    return <Dash role={userRole} />;
+  }
   return (
     <div className="flex items-center justify-center py-10 outline-none">
       <div className="h-[500px] w-[60%] flex rounded-lg overflow-hidden shadow-2xl justify-center items-center relative">
