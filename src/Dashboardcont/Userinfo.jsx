@@ -1,7 +1,7 @@
 import React from "react";
 import loggg from "../Resources/bms-logo.png";
 
-const Addmovie = () => {
+const Userinfo = () => {
   return (
     <div>
       <div className="dashnav w-screen h-24 bg-white flex overflow-hidden sticky top-0">
@@ -53,116 +53,85 @@ const Addmovie = () => {
             <form>
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700">
-                  Movie Name :
+                  User Name :
                 </label>
                 <input
                   type="text"
-                  id="movieName"
-                  name="movieName"
-                  // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="mt-1 p-2 border border-gray-300 rounded w-full"
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700">
-                  Description
-                </label>
-                <textarea
-                  type="text"
-                  id="desc"
-                  name="desc"
-                  rows={"6"}
-                  // onChange={(e) =>
-                  //   setFormData({ ...formData, desc: e.target.value })
-                  // }
-                  className="mt-1 p-2 border border-gray-300 rounded w-full"
-                />
-              </div>
-              <div className="mb-4 flex justify-evenly">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    Poster Url :
-                  </label>
-                  <input
-                    type="text"
-                    id="poster"
-                    name="poster"
-                    // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="mt-1 p-2 border border-gray-300 rounded w-full"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    Imdb rating :
-                  </label>
-                  <input
-                    type="text"
-                    id="rating"
-                    name="rating"
-                    // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="mt-1 p-2 border border-gray-300 rounded w-full"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    Genere :
-                  </label>
-                  <input
-                    type="text"
-                    id="genereName"
-                    name="genereName"
-                    // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="mt-1 p-2 border border-gray-300 rounded w-full"
-                  />
-                </div>
-              </div>
-
-              <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700">
-                  Crew Member :
-                </label>
-                <input
-                  type="text"
-                  id="crewName"
-                  name="crewName"
-                  // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="mt-1 p-2 border border-gray-300 rounded w-full"
-                />
-              </div>
-              <div className="mb-4"></div>
-              <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700">
-                  Language :
-                </label>
-                <input
-                  type="text"
-                  id="language"
-                  name="language"
-                  // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="mt-1 p-2 border border-gray-300 rounded w-full"
-                />
-              </div>
-              <div className="mb-4"></div>
-              <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700">
-                  Cast :
-                </label>
-                <input
-                  type="text"
-                  id="castName"
-                  name="castName"
+                  id="userName"
+                  name="userName"
                   // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="mt-1 p-2 border border-gray-300 rounded w-full"
                 />
               </div>
 
-              <div className="mt-4">
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700">
+                  Email Id :
+                </label>
+                <input
+                  type="text"
+                  id="usermailid"
+                  name="usermailid"
+                  // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="mt-1 p-2 border border-gray-300 rounded w-full"
+                />
+              </div>
+
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700">
+                  Password :
+                </label>
+                <input
+                  type="password"
+                  id="userpassword"
+                  name="userpassword"
+                  // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="mt-1 p-2 border border-gray-300 rounded w-full"
+                />
+              </div>
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700">
+                  Mobile No :
+                </label>
+                <input
+                  type="number"
+                  id="usermobilenum"
+                  name="usermobilenum"
+                  // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="mt-1 p-2 border border-gray-300 rounded w-full"
+                />
+              </div>
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700">
+                  Role :
+                </label>
+                <input
+                  type="text"
+                  id="userrole"
+                  name="userrole"
+                  // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="mt-1 p-2 border border-gray-300 rounded w-full"
+                />
+              </div>
+
+              <div className="mt-4 flex gap-4">
                 <button
                   type="submit"
                   className="px-4 py-2 mb-4 bg-blue-500 text-white rounded hover:bg-blue-700"
                 >
                   Submit
+                </button>
+                <button
+                  type="update"
+                  className="px-4 py-2 mb-4 bg-blue-500 text-white rounded hover:bg-blue-700"
+                >
+                  Update
+                </button>
+                <button
+                  type="delete"
+                  className="px-4 py-2 mb-4 bg-blue-500 text-white rounded hover:bg-blue-700"
+                >
+                  Delete
                 </button>
               </div>
             </form>
@@ -173,4 +142,4 @@ const Addmovie = () => {
   );
 };
 
-export default Addmovie;
+export default Userinfo;

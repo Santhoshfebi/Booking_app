@@ -29,6 +29,11 @@ const Dash = () => {
         <div className="sidenav w-1/4 h-screen">
           <div className="control w-full h-24  flex items-center justify-center">
             <button className="  h-10 w-4/5 rounded-3xl hover:bg-gray-500 active:bg-gray-200 focus:outline-none focus:ring focus:ring-[#e7174b]">
+              User
+            </button>
+          </div>
+          <div className="control w-full h-24  flex items-center justify-center">
+            <button className="  h-10 w-4/5 rounded-3xl hover:bg-gray-500 active:bg-gray-200 focus:outline-none focus:ring focus:ring-[#e7174b]">
               Movies
             </button>
           </div>
@@ -39,6 +44,7 @@ const Dash = () => {
           </div>
           <div className="control w-full h-24 flex items-center justify-center">
             <button className=" h-10 w-4/5 rounded-3xl hover:bg-gray-500 active:bg-gray-200 focus:outline-none focus:ring focus:ring-[#e7174b] ">
+              {/* offer price details */}
               Offers
             </button>
           </div>
