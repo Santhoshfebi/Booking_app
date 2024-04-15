@@ -1,19 +1,20 @@
 import React from "react";
-import Navbar from "../Components/Navbar";
-import Header from "../Components/Header";
-import Corporates from "./Corporates";
-import MovieCarousal from "../Components/MovieCarousal";
-import CardCarousal from "../Components/CardCarousal";
-import Carousal from "../Components/Carousal";
-import Credit from "./Credit";
-import Offers from "./Offers";
-import LogIn from "./LogIn";
-import SignIn from "./SignIn";
-import GiftCard from "./GiftCard";
-import SideMenu from "./SideMenu";
-import Addmovie from "../Dashboardcont/Addmovie";
-import Dash from "../Dashboardcont/Dash";
-import Userinfo from "../Dashboardcont/Userinfo";
+// import Payment from "./Payment";
+// import Navbar from '../Components/Navbar';
+// import Header from '../Components/Header';
+// import Corporates from './Corporates';
+// import MovieCarousal from '../Components/MovieCarousal';
+// import CardCarousal from '../Components/CardCarousal';
+// import Carousal from '../Components/Carousal';
+// import Credit from './Credit';
+// import Offers from './Offers';
+import Registration from "./Registration";
+// import SignIn from './SignIn';
+// import GiftCard from './GiftCard'
+// import SideMenu from "./SideMenu";
+// import Dash from "../Dashboardcont/Dash";
+// import AddMovie from "../Dashboardcont/AddMovie";
+import BuyTickets from "./BuyTickets";
 
 const Home = () => {
   return (
@@ -28,11 +29,13 @@ const Home = () => {
       {/* <Credit /> */}
       {/* <GiftCard /> */}
       {/* <SignIn /> */}
-      {/* <LogIn /> */}
+      <Registration />
       {/* <SideMenu /> */}
       {/* <Dash /> */}
+      {/* <AddMovie /> */}
+      {/* <Payment /> */}
+      <BuyTickets />
       {/* <Addmovie /> */}
-      {/* <Userinfo /> */}
     </>
   );
 };
