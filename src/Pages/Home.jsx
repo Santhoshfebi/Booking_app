@@ -1,21 +1,20 @@
 import React from "react";
-// import Payment from "./Payment";
-import Navbar from "../Components/Navbar";
-import Header from "../Components/Header";
-import AddMovie from "../Dashboardcont/Addmovie";
-import Userinfo from "../Dashboardcont/Userinfo";
-// import Corporates from './Corporates';
-// import MovieCarousal from '../Components/MovieCarousal';
-// import CardCarousal from '../Components/CardCarousal';
-// import Carousal from '../Components/Carousal';
-// import Credit from './Credit';
-// import Offers from './Offers';
-import Registration from "./Registration";
-// import SignIn from './SignIn';
-// import GiftCard from './GiftCard'
+// import Navbar from "../Components/Navbar";
+// import Header from "../Components/Header";
+// import Corporates from "./Corporates";
+// import MovieCarousal from "../Components/MovieCarousal";
+// import CardCarousal from "../Components/CardCarousal";
+// import Carousal from "../Components/Carousal";
+// import Credit from "./Credit";
+// import Offers from "./Offers";
+// import LogIn from "./LogIn";
+// import SignIn from "./SignIn";
+// import GiftCard from "./GiftCard";
 // import SideMenu from "./SideMenu";
+// import Addmovie from "../Dashboardcont/Addmovie";
 // import Dash from "../Dashboardcont/Dash";
-// import BuyTickets from "./BuyTickets";
+// import Userinfo from "../Dashboardcont/Userinfo";
+
 const Home = () => {
   return (
     <>
