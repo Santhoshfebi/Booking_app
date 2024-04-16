@@ -95,7 +95,7 @@ export default function Registration() {
               className="bg-gray-100 w-[80%] text-sm h-7 rounded-md p-4 focus:outline-none"
             />
             <input
-              type="text"
+              type="number"
               placeholder="Mobile Number"
               name="mobile_no"
               value={formData.mobile_no}

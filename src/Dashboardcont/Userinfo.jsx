@@ -1,7 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import loggg from "../Resources/bms-logo.png";
 
 const Userinfo = () => {
+  const [formData, setFormData] = useState({
+    username: "",
+    usermailid: "",
+    userpassword: "",
+    usermobilenum: "",
+    userrole: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        "http://localhost:3001/userinfo",
+        formData
+      );
+      console.log(response.data); // Log response from server
+      // Clear form after successful submission if needed
+      setFormData({
+        username: "",
+        usermailid: "",
+        userpassword: "",
+        usermobilenum: "",
+        userrole: "",
+      });
+    } catch (error) {
+      console.error("Error adding user:", error);
+      // Handle error
+    }
+  };
   return (
     <div>
       <div className="dashnav w-screen h-24 bg-white flex overflow-hidden sticky top-0">
@@ -50,7 +88,7 @@ const Userinfo = () => {
         </div>
         <div className="maincontent w-3/4 h-screen bg-slate-400">
           <div className="cot ml-3 mr-3 mt-3 mb-3 h-fit">
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700">
                   User Name :
@@ -58,8 +96,8 @@ const Userinfo = () => {
                 <input
                   type="text"
                   id="userName"
-                  name="userName"
-                  // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  name="username"
+                  onChange={handleChange}
                   className="mt-1 p-2 border border-gray-300 rounded w-full"
                 />
               </div>
@@ -72,7 +110,7 @@ const Userinfo = () => {
                   type="text"
                   id="usermailid"
                   name="usermailid"
-                  // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  onChange={handleChange}
                   className="mt-1 p-2 border border-gray-300 rounded w-full"
                 />
               </div>
@@ -85,7 +123,7 @@ const Userinfo = () => {
                   type="password"
                   id="userpassword"
                   name="userpassword"
-                  // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  onChange={handleChange}
                   className="mt-1 p-2 border border-gray-300 rounded w-full"
                 />
               </div>
@@ -97,7 +135,7 @@ const Userinfo = () => {
                   type="number"
                   id="usermobilenum"
                   name="usermobilenum"
-                  // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  onChange={handleChange}
                   className="mt-1 p-2 border border-gray-300 rounded w-full"
                 />
               </div>
@@ -109,7 +147,7 @@ const Userinfo = () => {
                   type="text"
                   id="userrole"
                   name="userrole"
-                  // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  onChange={handleChange}
                   className="mt-1 p-2 border border-gray-300 rounded w-full"
                 />
               </div>

@@ -1,7 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import loggg from "../Resources/bms-logo.png";
 
 const AddMovie = () => {
+  const [formData, setFormData] = useState({
+    moviename: "",
+    description: "",
+    url: "",
+    genere: "",
+    language: "",
+    cast: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        "http://localhost:3001/addMovie",
+        formData
+      );
+      console.log(response.data); // Log response from server
+      // Clear form after successful submission if needed
+      setFormData({
+        moviename: "",
+        description: "",
+        url: "",
+        genere: "",
+        language: "",
+        cast: "",
+      });
+    } catch (error) {
+      console.error("Error adding movie:", error);
+      // Handle error
+    }
+  };
   return (
     <div>
       <div className="dashnav w-screen h-24 bg-white flex overflow-hidden sticky top-0">
@@ -50,7 +90,7 @@ const AddMovie = () => {
         </div>
         <div className="maincontent w-3/4 h-screen bg-slate-400">
           <div className="cot ml-3 mr-3 mt-3 mb-3 h-fit">
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700">
                   Movie Name :
@@ -58,8 +98,8 @@ const AddMovie = () => {
                 <input
                   type="text"
                   id="movieName"
-                  name="movieName"
-                  // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  name="moviename"
+                  onChange={handleChange}
                   className="mt-1 p-2 border border-gray-300 rounded w-full"
                 />
               </div>
@@ -70,11 +110,9 @@ const AddMovie = () => {
                 <textarea
                   type="text"
                   id="desc"
-                  name="desc"
+                  name="description"
                   rows={"6"}
-                  // onChange={(e) =>
-                  //   setFormData({ ...formData, desc: e.target.value })
-                  // }
+                  onChange={handleChange}
                   className="mt-1 p-2 border border-gray-300 rounded w-full"
                 />
               </div>
@@ -86,13 +124,13 @@ const AddMovie = () => {
                   <input
                     type="text"
                     id="poster"
-                    name="poster"
-                    // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    name="url"
+                    onChange={handleChange}
                     className="mt-1 p-2 border border-gray-300 rounded w-full"
                   />
                 </div>
 
-                <div>
+                {/* <div>
                   <label className="block text-sm font-medium text-gray-700">
                     Imdb rating :
                   </label>
@@ -100,10 +138,10 @@ const AddMovie = () => {
                     type="text"
                     id="rating"
                     name="rating"
-                    // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    onChange={handleChange}
                     className="mt-1 p-2 border border-gray-300 rounded w-full"
                   />
-                </div>
+                </div> */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700">
                     Genere :
@@ -111,14 +149,14 @@ const AddMovie = () => {
                   <input
                     type="text"
                     id="genereName"
-                    name="genereName"
-                    // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    name="genere"
+                    onChange={handleChange}
                     className="mt-1 p-2 border border-gray-300 rounded w-full"
                   />
                 </div>
               </div>
 
-              <div className="mb-4">
+              {/* <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700">
                   Crew Member :
                 </label>
@@ -126,10 +164,10 @@ const AddMovie = () => {
                   type="text"
                   id="crewName"
                   name="crewName"
-                  // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  onChange={handleChange}
                   className="mt-1 p-2 border border-gray-300 rounded w-full"
                 />
-              </div>
+              </div> */}
               <div className="mb-4"></div>
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700">
@@ -139,7 +177,7 @@ const AddMovie = () => {
                   type="text"
                   id="language"
                   name="language"
-                  // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  onChange={handleChange}
                   className="mt-1 p-2 border border-gray-300 rounded w-full"
                 />
               </div>
@@ -151,8 +189,8 @@ const AddMovie = () => {
                 <input
                   type="text"
                   id="castName"
-                  name="castName"
-                  // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  name="cast"
+                  onChange={handleChange}
                   className="mt-1 p-2 border border-gray-300 rounded w-full"
                 />
               </div>

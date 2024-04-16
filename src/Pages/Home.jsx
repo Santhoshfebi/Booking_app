@@ -1,7 +1,9 @@
 import React from "react";
 // import Payment from "./Payment";
-// import Navbar from '../Components/Navbar';
-// import Header from '../Components/Header';
+import Navbar from "../Components/Navbar";
+import Header from "../Components/Header";
+import AddMovie from "../Dashboardcont/Addmovie";
+import Userinfo from "../Dashboardcont/Userinfo";
 // import Corporates from './Corporates';
 // import MovieCarousal from '../Components/MovieCarousal';
 // import CardCarousal from '../Components/CardCarousal';
@@ -13,14 +15,12 @@ import Registration from "./Registration";
 // import GiftCard from './GiftCard'
 // import SideMenu from "./SideMenu";
 // import Dash from "../Dashboardcont/Dash";
-// import AddMovie from "../Dashboardcont/AddMovie";
-import BuyTickets from "./BuyTickets";
-
+// import BuyTickets from "./BuyTickets";
 const Home = () => {
   return (
     <>
-      {/* <Navbar /> */}
-      {/* <Header /> */}
+      <Navbar />
+      <Header />
       {/* <Corporates /> */}
       {/* <CardCarousal /> */}
       {/* <MovieCarousal /> */}
@@ -32,10 +32,10 @@ const Home = () => {
       <Registration />
       {/* <SideMenu /> */}
       {/* <Dash /> */}
-      {/* <AddMovie /> */}
       {/* <Payment /> */}
-      <BuyTickets />
-      {/* <Addmovie /> */}
+      {/* <BuyTickets /> */}
+      <AddMovie />
+      <Userinfo />
     </>
   );
 };
