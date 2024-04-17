@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import axios from "axios";
 import loggg from "../Resources/bms-logo.png";
 
-const AddMovie = () => {
+const Userinfo = () => {
   const [formData, setFormData] = useState({
-    moviename: "",
-    description: "",
-    url: "",
-    genere: "",
-    language: "",
-    cast: "",
+    username: "",
+    usermailid: "",
+    userpassword: "",
+    usermobilenum: "",
+    userrole: "",
   });
 
   const handleChange = (e) => {
@@ -24,21 +23,20 @@ const AddMovie = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3001/addMovie",
+        "http://localhost:3001/userinfo",
         formData
       );
       console.log(response.data); // Log response from server
       // Clear form after successful submission if needed
       setFormData({
-        moviename: "",
-        description: "",
-        url: "",
-        genere: "",
-        language: "",
-        cast: "",
+        username: "",
+        usermailid: "",
+        userpassword: "",
+        usermobilenum: "",
+        userrole: "",
       });
     } catch (error) {
-      console.error("Error adding movie:", error);
+      console.error("Error adding user:", error);
       // Handle error
     }
   };
@@ -93,114 +91,85 @@ const AddMovie = () => {
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700">
-                  Movie Name :
+                  User Name :
                 </label>
                 <input
                   type="text"
-                  id="movieName"
-                  name="moviename"
+                  id="userName"
+                  name="username"
+                  onChange={handleChange}
+                  className="mt-1 p-2 border border-gray-300 rounded w-full"
+                />
+              </div>
+
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700">
+                  Email Id :
+                </label>
+                <input
+                  type="text"
+                  id="usermailid"
+                  name="usermailid"
+                  onChange={handleChange}
+                  className="mt-1 p-2 border border-gray-300 rounded w-full"
+                />
+              </div>
+
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700">
+                  Password :
+                </label>
+                <input
+                  type="password"
+                  id="userpassword"
+                  name="userpassword"
                   onChange={handleChange}
                   className="mt-1 p-2 border border-gray-300 rounded w-full"
                 />
               </div>
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700">
-                  Description
-                </label>
-                <textarea
-                  type="text"
-                  id="desc"
-                  name="description"
-                  rows={"6"}
-                  onChange={handleChange}
-                  className="mt-1 p-2 border border-gray-300 rounded w-full"
-                />
-              </div>
-              <div className="mb-4 flex justify-evenly">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    Poster Url :
-                  </label>
-                  <input
-                    type="text"
-                    id="poster"
-                    name="url"
-                    onChange={handleChange}
-                    className="mt-1 p-2 border border-gray-300 rounded w-full"
-                  />
-                </div>
-
-                {/* <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    Imdb rating :
-                  </label>
-                  <input
-                    type="text"
-                    id="rating"
-                    name="rating"
-                    onChange={handleChange}
-                    className="mt-1 p-2 border border-gray-300 rounded w-full"
-                  />
-                </div> */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    Genere :
-                  </label>
-                  <input
-                    type="text"
-                    id="genereName"
-                    name="genere"
-                    onChange={handleChange}
-                    className="mt-1 p-2 border border-gray-300 rounded w-full"
-                  />
-                </div>
-              </div>
-
-              {/* <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700">
-                  Crew Member :
+                  Mobile No :
                 </label>
                 <input
-                  type="text"
-                  id="crewName"
-                  name="crewName"
+                  type="number"
+                  id="usermobilenum"
+                  name="usermobilenum"
                   onChange={handleChange}
                   className="mt-1 p-2 border border-gray-300 rounded w-full"
                 />
-              </div> */}
-              <div className="mb-4"></div>
+              </div>
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700">
-                  Language :
+                  Role :
                 </label>
                 <input
                   type="text"
-                  id="language"
-                  name="language"
-                  onChange={handleChange}
-                  className="mt-1 p-2 border border-gray-300 rounded w-full"
-                />
-              </div>
-              <div className="mb-4"></div>
-              <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700">
-                  Cast :
-                </label>
-                <input
-                  type="text"
-                  id="castName"
-                  name="cast"
+                  id="userrole"
+                  name="userrole"
                   onChange={handleChange}
                   className="mt-1 p-2 border border-gray-300 rounded w-full"
                 />
               </div>
 
-              <div className="mt-4">
+              <div className="mt-4 flex gap-4">
                 <button
                   type="submit"
                   className="px-4 py-2 mb-4 bg-blue-500 text-white rounded hover:bg-blue-700"
                 >
                   Submit
+                </button>
+                <button
+                  type="update"
+                  className="px-4 py-2 mb-4 bg-blue-500 text-white rounded hover:bg-blue-700"
+                >
+                  Update
+                </button>
+                <button
+                  type="delete"
+                  className="px-4 py-2 mb-4 bg-blue-500 text-white rounded hover:bg-blue-700"
+                >
+                  Delete
                 </button>
               </div>
             </form>
@@ -211,4 +180,4 @@ const AddMovie = () => {
   );
 };
 
-export default AddMovie;
+export default Userinfo;

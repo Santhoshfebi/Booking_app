@@ -1,9 +1,10 @@
-
-import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './Pages/Home';
-import Offers from './Pages/Offers';
-import Credit from './Pages/Credit'
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home";
+import Offers from "./Pages/Offers";
+import Credit from "./Pages/Credit";
+// import Movies from "./Pages/MoviesPage";
+// import ListYourShow from "./Pages/ListYourShow";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/offers" element={<Offers />} />
-        <Route path="/offers/credit" element={<Credit />}/>
+        <Route path="/offers/credit" element={<Credit />} />
       </Routes>
     </Router>
   );
