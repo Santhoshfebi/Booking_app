@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import SignIn from './Pages/SignIn';
@@ -28,6 +29,7 @@ function App() {
         <Route path="/movie/:id" element={<MovieDetails />} />
         {userRole === 'admin' && <Route path="/dashboard" element={<Dash />} />}
         {userRole === 'user' && <Route path="/dashboard" element={<Navigate to="/" />} />}
+
       </Routes>
     </Router>
   );

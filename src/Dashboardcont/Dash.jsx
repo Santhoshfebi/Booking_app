@@ -40,6 +40,8 @@ const Dash = () => {
             {/* Use onClick to handle the Add Movie button click */}
             <button onClick={handleAddMovieClick} className="h-10 w-4/5 rounded-3xl hover:bg-gray-500 active:bg-gray-200 focus:outline-none focus:ring focus:ring-gray-500">
               Add Movie
+
+     
             </button>
           </div>
           <div className="control w-full h-24  border-grey-400 flex items-center justify-center">
