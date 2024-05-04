@@ -23,7 +23,7 @@ const Header = () => {
       <div className="ml-20">
         <ul className="flex items-center justify-center gap-4 text-xs">
           <li>
-            <a
+            {/* <a
               href="/ListYourShow"
               className="text-black-500 hover:underline"
               style={{ textDecoration: "none" }}
@@ -31,12 +31,18 @@ const Header = () => {
               <span className="show-link-text hover:underline">
                 ListYourShow
               </span>
-            </a>
+            </a> */}
+            <Link
+              to="/ListYourShow"
+              className="text-black-500 hover:underline decoration-0"
+            >
+              ListYourShow
+            </Link>
           </li>
 
           <li>Corporates</li>
           <li>
-            <Link to={"./offers"}>Offers</Link>{" "}
+            <Link to={"../Components/"}>Offers</Link>{" "}
           </li>
           <li>Gift Cards</li>
         </ul>
