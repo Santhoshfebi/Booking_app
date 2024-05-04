@@ -3,6 +3,8 @@ import axios from 'axios';
 import loginBackground from "../Resources/login.webp";
 import bmsLogo from "../Resources/bms-logo.png";
 import Dash from '../Dashboardcont/Dash';
+import App from '../App';
+import Home from './Home';
 
 export default function SignIn() {
   const [formData, setFormData] = useState({
@@ -18,14 +20,16 @@ export default function SignIn() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent default form submission
     try {
       const response = await axios.post('http://localhost:3001/login', formData);
-      if (response.data === 'admin') {
+      const role = response.data; // Assuming the backend returns the user's role directly
+  
+      if (role === 'admin') {
         // Redirect to dashboard
-        setUserRole('admin'); 
-      } else if (response.data === 'user') {
-        // Redirect to website
+        setUserRole('admin');
+      } else if (role === 'user') {
+        // Redirect to website or home page
         setUserRole('user');
       } else {
         setLoginStatus('Incorrect email or password');
@@ -35,9 +39,16 @@ export default function SignIn() {
       setLoginStatus('An error occurred');
     }
   };
-  if (userRole) {
+
+  // Redirect if userRole is set
+  if (userRole === 'admin') {
     return <Dash role={userRole} />;
+  } else if (userRole === 'user') {
+    // Redirect to website or home page
+    // Replace the below line with the appropriate redirection logic
+    return <Home role={userRole} />;
   }
+
   return (
     <div className="flex items-center justify-center py-10 outline-none">
       <div className="h-[500px] w-[60%] flex rounded-lg overflow-hidden shadow-2xl justify-center items-center relative">
@@ -50,7 +61,7 @@ export default function SignIn() {
             <img src={bmsLogo} alt="" className="w-full h-full" />
           </div>
           <form onSubmit={handleSubmit} className="cont flex gap-4 flex-col items-center text-white">
-          <input
+            <input
               type="email"
               placeholder="Email Address"
               name="emailid" value={formData.emailid} onChange={handleChange} required 
@@ -68,11 +79,10 @@ export default function SignIn() {
             <div className="font-semibold text-sm text-white">New member? <a href="" className="text-red-500 italic underline">SignUp</a></div>
 
             {loginStatus && <p>{loginStatus}</p>}
-        </form>
-            <div><a href="" className="font-semibold text-sm text-white pb-">Forgot Password?</a></div>
+          </form>
+          <div><a href="" className="font-semibold text-sm text-white pb-">Forgot Password?</a></div>
         </div>
-    
+      </div>
     </div>
-  </div>
-  )
+  );
 }

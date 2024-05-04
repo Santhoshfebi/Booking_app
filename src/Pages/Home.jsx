@@ -1,43 +1,27 @@
-import React from "react";
-// import Payment from "./Payment";
-// import Navbar from '../Components/Navbar';
-// import Header from '../Components/Header';
-// import Corporates from './Corporates';
-// import MovieCarousal from '../Components/MovieCarousal';
-// import CardCarousal from '../Components/CardCarousal';
-// import Carousal from '../Components/Carousal';
-// import Credit from './Credit';
-// import Offers from './Offers';
-import Registration from './Registration';
-// import SignIn from './SignIn';
-// import GiftCard from './GiftCard'
-// import SideMenu from "./SideMenu";
-// import Dash from "../Dashboardcont/Dash";
-// import AddMovie from "../Dashboardcont/AddMovie";
-import BuyTickets from "./BuyTickets";
+import React, { useEffect } from 'react';
+// // import Payment from "./Payment";
+import Navbar from '../Components/Navbar';
+import Header from '../Components/Header';
+import Carousal from '../Components/Carousal';
+import CardCarousal from '../Components/CardCarousal';
+import Footer from "../Components/Footer";
+
 
 const Home = () => {
+  useEffect(() => {
+    const userRole = localStorage.getItem('userRole');
+    if (!userRole) {
+      // Redirect to login page if user role is not present
+      window.location.href = '/signin';
+    }
+  }, []);
   return (
     <>
-      {/* <Navbar /> */}
-      {/* <Header /> */}
-      {/* <Corporates /> */}
-      {/* <Corporates /> */}
-      {/* <CardCarousal /> */}
-      {/* <MovieCarousal /> */}
-      {/* <Carousal /> */}
-      {/* <Offers /> */}
-      {/* <Credit /> */}
-      {/* <GiftCard/>
-     <Credit /> */}
-      {/* <SignIn /> */}
-      <Registration />
-      {/* <SideMenu /> */}
-      {/* <Dash /> */}
-      {/* <AddMovie /> */}
-      {/* <Payment /> */}
-      <BuyTickets />
-      {/* <Addmovie /> */}
+      <Navbar />
+      <Header />
+      <Carousal />
+      <CardCarousal />
+      <Footer />
     </>
   );
 };

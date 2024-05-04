@@ -1,79 +1,91 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import img1 from '../Resources/img1.avif';
-import img2 from '../Resources/img2.avif';
-import img3 from '../Resources/img3.avif';
-import img4 from '../Resources/img4.avif';
-import img5 from '../Resources/img5.avif';
 
 function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "red" }}
-        onClick={onClick}
-      />
-    );
-  }
-  
-  function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "green" }}
-        onClick={onClick}
-      />
-    );
+  const { className, onClick } = props;
+  return (
+    <div
+      className={className}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, onClick } = props;
+  return (
+    <div
+      className={className}
+      onClick={onClick}
+    />
+  );
+}
+
+const CardCarousal = () => {
+  const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchMovies = async () => {
+      try {
+        const response = await axios.get('http://localhost:3001/getMoviesInfo');
+        setMovies(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching movies:', error);
+        setError('Error fetching movies');
+        setLoading(false);
+      }
+    };
+
+    fetchMovies();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
   }
 
-  
-const CardCarousal = () => {
-    var settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        initialSlide: 0,
-       
-      };
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    initialSlide: 0,
+  };
+
+  const containerStyle = {
+    width: '95%',
+    height: '400px',
+    margin: '0 auto',
+    outline: "none", 
+    border: "none",
+  };
 
   return (
-    <div className="slider-container w-[1000px] ">
-    <Slider {...settings}>
-      <div className='px-5'>
-        <img src={img1} alt="" />
-      </div>
-      <div className='px-5'>
-        <img src={img2} alt="" />
-      </div>
-      <div className='px-5'>
-        <img src={img3} alt="" />
-      </div>
-      <div className='px-5'>
-        <img src={img4} alt="" />
-      </div>
-      <div className='px-5'>
-        <img src={img5} alt="" />
-      </div>
-      <div className='px-5'>
-        <img src={img1} alt="" />
-      </div>
-      <div className='px-5'>
-        <img src={img2} alt="" />
-      </div>
-      <div className='px-5'>
-        <img src={img3} alt="" />
-      </div>
-    </Slider>
-  </div>
-  )
+    <div className="slider-container" style={containerStyle}>
+      <Slider {...settings}>
+        {movies.map(movie => (
+          <div key={movie.movieid} className="px-5">
+            <Link to={`/movie/${movie.movieid}`}>
+              <img src={movie.url} alt={movie.moviename} className="slider-image" />
+            </Link>
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
 }
 
 export default CardCarousal;

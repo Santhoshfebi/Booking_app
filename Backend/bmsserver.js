@@ -40,8 +40,9 @@ app.post('/register', (req, res) => {
         res.status(400).send('User already exists');
       } else {
         // User does not exist, proceed with registration
-        const insertUserQuery = 'INSERT INTO registration (fullname, emailid, password, mobile_no) VALUES (?, ?, ?, ?)';
-        db.query(insertUserQuery, [fullname, emailid, password, mobile_no], (err, result) => {
+        const insertUserQuery = 'INSERT INTO registration (fullname, emailid, password, mobile_no, role) VALUES (?, ?, ?, ?, ?)';
+        const role = 'user'; // Default role for new users
+        db.query(insertUserQuery, [fullname, emailid, password, mobile_no, role], (err, result) => {
           if (err) {
             console.log(err);
             res.status(500).send('Error registering user');

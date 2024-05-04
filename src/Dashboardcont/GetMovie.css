@@ -1,0 +1,20 @@
+.movies-container {
+    width: 100%;
+  }
+  
+  .slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth; /* Add smooth scrolling */
+  }
+  
+  .slider-content {
+    display: flex;
+  }
+  
+  .slider-image {
+    flex-shrink: 0; /* Prevent images from shrinking */
+    width: 200px;
+    margin: 10px;
+  }
+  

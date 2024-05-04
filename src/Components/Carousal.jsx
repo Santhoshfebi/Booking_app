@@ -26,12 +26,13 @@ const Carousal = () => {
         }}
         pagination={{
           clickable: true,
+          
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         initialSlide={0}
         loop={true}
-        className="mySwiper"
+        className="mySwiper my-3"
         >
         <SwiperSlide><img src={img1} className='rounded-2xl' alt="" /></SwiperSlide>
         <SwiperSlide><img src={img2} className='rounded-2xl' alt="" /></SwiperSlide>

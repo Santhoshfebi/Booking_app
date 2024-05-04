@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <div className='bg-gray-900 h-20 flex items-center relative pl-10 text'>
+      <div className='bg-gray-900 h-20 flex items-center relative top-5 pl-10 text'>
         <img src="https://in.bmscdn.com/webin/common/icons/hut.svg" className='' />
         <label className='text-white font-bold text-lg pl-3'>
         List your Show
