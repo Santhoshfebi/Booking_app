@@ -6,18 +6,20 @@ import Header from '../Components/Header';
 import Carousal from '../Components/Carousal';
 import CardCarousal from '../Components/CardCarousal';
 import Footer from "../Components/Footer";
+import Registration from './Registration';
 
 const Home = () => {
-  useEffect(() => {
-    const userRole = localStorage.getItem('userRole');
-    if (!userRole) {
-      // Redirect to login page if user role is not present
-      window.location.href = '/signin';
-    }
-  }, []);
+  // useEffect(() => {
+  //   const userRole = localStorage.getItem('userRole');
+  //   if (!userRole) {
+  //     // Redirect to login page if user role is not present
+  //     window.location.href = '/signin';
+  //   }
+  // }, []);
   return (
     <>
       <Navbar />
+      <Registration />
       <Header />
       <Carousal />
       <CardCarousal />

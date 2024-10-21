@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import axios from 'axios';
 import loginBackground from "../Resources/login.webp";
 import bmsLogo from "../Resources/bms-logo.png";
 import Dash from '../Dashboardcont/Dash';
-import App from '../App';
+// import App from '../App';
 import Home from './Home';
 
 export default function SignIn() {
@@ -31,12 +32,13 @@ export default function SignIn() {
       } else if (role === 'user') {
         // Redirect to website or home page
         setUserRole('user');
+        // localStorage.setItem('userRole')
       } else {
         setLoginStatus('Incorrect email or password');
       }
     } catch (error) {
       console.error('Error logging in:', error);
-      setLoginStatus('An error occurred');
+      setLoginStatus('email id or password not correct');
     }
   };
 
@@ -50,7 +52,7 @@ export default function SignIn() {
   }
 
   return (
-    <div className="flex items-center justify-center py-10 outline-none">
+    <div className="flex items-center justify-center py-24 outline-none">
       <div className="h-[500px] w-[60%] flex rounded-lg overflow-hidden shadow-2xl justify-center items-center relative">
         <div className="h-full w-full relative">
           <img src={loginBackground} alt="" className="h-full w-full object-cover" />
@@ -65,7 +67,7 @@ export default function SignIn() {
               type="email"
               placeholder="Email Address"
               name="emailid" value={formData.emailid} onChange={handleChange} required 
-              className="bg-gray-100 w-[80%] text-sm h-7 rounded-md p-4 focus:outline-none"
+              className="bg-gray-100 w-[80%] text-sm h-7 rounded-md p-4 focus:outline-none text-black"
             />
             <input
               type="password"
@@ -76,11 +78,11 @@ export default function SignIn() {
          
             <div className="text-xs text-white">By signing up,you agree to our <a href="" className="text-red-500 underline">Terms of use</a> and <a href="" className="text-red-500 underline">Privacy Policy</a>.</div>
             <button type="submit" className="w-[90%] rounded-md bg-[#F84464] text-white text-sm h-8">SIGN IN</button>
-            <div className="font-semibold text-sm text-white">New member? <a href="" className="text-red-500 italic underline">SignUp</a></div>
+            <div className="font-semibold text-sm text-white">New member?<Link to="/home"> <a href="" className="text-red-500 italic underline">SignUp</a></Link></div>
 
             {loginStatus && <p>{loginStatus}</p>}
           </form>
-          <div><a href="" className="font-semibold text-sm text-white pb-">Forgot Password?</a></div>
+          <div><a href="" className="mb">Forgot Password?</a></div>
         </div>
       </div>
     </div>

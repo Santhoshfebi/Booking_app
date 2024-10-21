@@ -7,11 +7,10 @@
     const [formData, setFormData] = useState({
       moviename: '',
       description: '',
-      genre: '', // Corrected field name
+      genere: '', // Corrected field name
       language: '',
       url: '',
       cast: '',
-      bgposter: ''
     });
 
     const [successMessage, setSuccessMessage] = useState('');
@@ -44,14 +43,13 @@
           url: "",
           language: "",
           cast: "",
-          bgposter: "",
         });
         // Show success message
         setSuccessMessage('Movie added successfully');
         // Hide success message after 3 seconds
         setTimeout(() => {
           setSuccessMessage('');
-        }, 3000);
+        }, 6000);
       } catch (error) {
         console.error("Error adding movie:", error);
         // Handle error
@@ -61,15 +59,14 @@
     // Render JSX
     return (
       <div>
-        
         {/* Main content */}
-        <div className="flex">
+        <div className="flex justify-evenly h-screen">
           {/* Side navigation */}
           
           {/* Main content */}
-          <div className=" bg-slate-400">
+          <div className=" w-3/4 bg-slate-400 h-5/6 rounded-2xl mt-4 overflow-hidden">
             {/* Form container */}
-            <div className="px-5 py-5">
+            <div className="px-5 py-1">
               {/* Movie form */}
               <form onSubmit={handleSubmit}>
                 {/* Movie name input */}
@@ -82,8 +79,6 @@
                     type="text"
                     id="movieName"
                     name="moviename"
-                    id="poster"
-                    name="url"
                     onChange={handleChange}
                     className="mt-1 p-2 border border-gray-300 rounded w-full"
                   />
@@ -119,12 +114,12 @@
                   {/* Genre input */}
                   <div>
                     <label className="block text-sm font-medium text-gray-700">
-                      Genre :
+                      Genere :
                     </label>
                     <input
                       type="text"
-                      id="genreName"
-                      name="genre"
+                      id="genereName"
+                      name="genere"
                       onChange={handleChange}
                       className="mt-1 p-2 border border-gray-300 rounded w-full"
                     />
@@ -157,7 +152,7 @@
                   />
                 </div>
                 {/* bgPoster URL input */}
-                <div className="mb-4">
+                {/* <div className="mb-4">
                   <label className="block text-sm font-medium text-gray-700">
                     bgposter :
                   </label>
@@ -168,12 +163,12 @@
                     onChange={handleChange}
                     className="mt-1 p-2 border border-gray-300 rounded w-full"
                   />
-                </div>
+                </div> */}
                 {/* Submit button */}
-                <div className="mt-4">
+                <div className="mt-4 justify-center flex">
                   <button
                     type="submit"
-                    className="px-4 py-2 mb-4 bg-blue-500 text-white rounded hover:bg-blue-700"
+                    className="px-4 py-2 mb-4 w-80 bg-blue-500 text-white rounded hover:bg-blue-700"
                   >
                     Submit
                   </button>
@@ -181,7 +176,7 @@
               </form>
               {/* Success message */}
               {successMessage && (
-                <div className="fixed bottom-10 right-10 bg-green-500 text-white p-2 rounded">
+                <div className="fixed top-10 right-10 bg-green-500 text-white p-2 rounded">
                   {successMessage}
                 </div>
               )}

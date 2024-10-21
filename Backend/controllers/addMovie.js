@@ -4,11 +4,11 @@ const db = require("../db/db");
 const router = express.Router();
 
 router.post("/addMovie", (req, res) => {
-  const { moviename, description, genre, language, url, cast, bgposter } = req.body;
+  const { moviename, description, genere, language, url, cast } = req.body;
 
   const insertMovieQuery =
-    "INSERT INTO movies (moviename, description, genre, language, url, cast, bgposter) VALUES (?, ?, ?, ?, ?, ?, ?)";
-  db.query(insertMovieQuery, [moviename, description, genre, language, url, cast, bgposter], (err, result) => {
+    "INSERT INTO movies (moviename, description, genere, language, url, cast) VALUES (?, ?, ?, ?, ?, ?)";
+  db.query(insertMovieQuery, [moviename, description, genere, language, url, cast], (err, result) => {
     if (err) {
       console.error("Error adding movie:", err);
       return res.status(500).send("Error adding movie");

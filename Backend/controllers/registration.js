@@ -4,7 +4,7 @@ const db = require("../db/db");
 const router = express.Router();
 
 router.post("/register", (req, res) => {
-  const { fullname, emailid, password, mobile_no } = req.body;
+  const { fullname, emailid, password, mobile_no, role} = req.body;
 
   // Check if the user with the provided email already exists
   const checkUserQuery = "SELECT * FROM registration WHERE emailid = ?";
@@ -21,8 +21,8 @@ router.post("/register", (req, res) => {
 
     // User does not exist, proceed with registration
     const insertUserQuery =
-      "INSERT INTO registration (fullname, emailid, password, mobile_no) VALUES (?, ?, ?, ?)";
-    db.query(insertUserQuery, [fullname, emailid, password, mobile_no], (err, result) => {
+      "INSERT INTO registration (fullname, emailid, password, mobile_no,role) VALUES (?, ?, ?, ?, ?)";
+    db.query(insertUserQuery, [fullname, emailid, password, mobile_no, role], (err, result) => {
       if (err) {
         console.error("Error registering user:", err);
         return res.status(500).send("Error registering user");

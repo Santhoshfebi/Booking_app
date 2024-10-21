@@ -12,8 +12,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const db = mysql.createConnection({
   host: "localhost",
-  user: "bookmyshowadmin",
-  password: "Bookmyshow1",
+  user: "showadmin",
+  password: "Bookmyshow123",
   database: "bookmyshow",
 });
 
@@ -62,7 +62,7 @@ app.post("/register", (req, res) => {
 app.post("/login", (req, res) => {
   const { emailid, password } = req.body;
 
-  const sql = "SELECT * FROM registration WHERE emailid = ? AND password = ?";
+  const sql = "SELECT * FROM bookmyshowadmin1 WHERE emailid = ? AND password = ?";
   db.query(sql, [emailid, password], (err, result) => {
     if (err) {
       console.log(err);

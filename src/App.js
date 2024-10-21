@@ -22,13 +22,14 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<SignIn setUserRole={setUserRole} />} />
+        {/* <Route path="/sigin" element={<Home />} />  */}
         <Route path="/home" element={<Home />} />
         <Route path="/offers" element={<Offers />} />
         <Route path="/offers/credit" element={<Credit />} />
         <Route path="/list-your-show" element={<ListYourShow />} />
         <Route path="/movie/:id" element={<MovieDetails />} />
         {userRole === 'admin' && <Route path="/dashboard" element={<Dash />} />}
-        {userRole === 'user' && <Route path="/dashboard" element={<Navigate to="/" />} />}
+        {userRole === 'user' && <Route path="/dashboard" element={<Navigate to="/"/>} />}
 
       </Routes>
     </Router>

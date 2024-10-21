@@ -10,6 +10,7 @@ export default function Registration() {
     password: "",
     confirmPassword: "", // Added confirmPassword field
     mobile_no: "",
+    role:"",
   });
 
   const [message, setMessage] = useState("");
@@ -103,6 +104,18 @@ export default function Registration() {
               required
               className="bg-gray-100 w-[80%] text-sm h-7 rounded-md p-4 focus:outline-none"
             />
+
+            <input
+              type="text"
+              placeholder="role"
+              name="role"
+              value={formData.role}
+              onChange={handleChange}
+              required
+              className="bg-gray-100 w-[80%] text-sm h-7 rounded-md p-4 focus:outline-none"
+            />
+            
+
             {message && <p style={{ color: "red" }}>{message}</p>}{" "}
             {/* Display message */}
             <div className="text-xs text-white">
